@@ -6,7 +6,7 @@ Tags: elementor, replace, elementor pro, search, addon
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.2
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -124,6 +124,11 @@ The installation process for the plugin is standard and user-friendly. Please in
 1. Now you can go to any page/post that uses Elementor and use the plugin as described in the documentation.
 
 ## CHANGELOG
+
+= 1.4.2 =
+
+- Update - PHP 8.3 compatibility check
+- Update - Compatibility check with Elementor 3.24
 
 = 1.4.1 =
 
