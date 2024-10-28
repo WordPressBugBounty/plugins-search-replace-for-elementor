@@ -108,7 +108,7 @@ if ( ! class_exists( 'ELEMSNR_Data_Formatter' ) ) {
 								// Allow <p><a><elsnr-highlight> tags for links within editor, title, etc.
 								$current_no_tags = $this->strip_tags_with_whitespace( $current, '<p>,<a>,<elsnr-highlight>' );
 							} else {
-								$current_no_tags = strip_tags( $current );
+								$current_no_tags = wp_strip_all_tags( $current );
 							}
 
 							// Needle is case-sensitive.

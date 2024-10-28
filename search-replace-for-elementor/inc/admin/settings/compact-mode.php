@@ -39,15 +39,19 @@ function elemsnr_display_compact_mode() {
 }
 
 function elemsnr_sanitize_compact_mode( $compact_mode ) {
-	if ( empty( $_REQUEST['elemsnr_nonce'] )
-		|| ! wp_verify_nonce( $_REQUEST['elemsnr_nonce'], 'elemsnr_security' ) ) {
+	// Verify the nonce.
+	$_wpnonce = ( isset( $_REQUEST['elemsnr_wpnonce'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['elemsnr_wpnonce'] ) ) : '';
+
+	if ( empty( $_wpnonce ) || ! wp_verify_nonce( $_wpnonce, 'elemsnr_settings_nonce' ) ) {
 		return;
 	}
 
+	// Nothing selected.
 	if ( empty( $compact_mode ) ) {
 		return;
 	}
 
+	// Option changed and updated.
 	if ( get_option( 'elemsnr_compact_mode', '' ) !== $compact_mode ) {
 		add_settings_error(
 			'elemsnr_settings_errors',

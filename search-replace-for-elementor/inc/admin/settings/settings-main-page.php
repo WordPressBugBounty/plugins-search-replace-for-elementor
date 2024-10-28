@@ -126,7 +126,7 @@ namespace DEVRY\ELEMSNR;
 					/* translators: %2$s is replaced with "Get the PRO version now" */
 					wp_kses( '%1$s %2$s!', 'search-replace-for-elementor', json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true ) ),
 					'<em>Need to do bulk or mass search and replace?</em>',
-					'<a href="https://' . esc_url( ELEMSNR_PLUGIN_DOMAIN ) . '"><strong>' . esc_html__( 'Get the PRO version now', 'search-replace-for-elementor' ) . '</strong></a>'
+					'<a href="https://bit.ly/3vhfGaI" target="_blank"><strong>' . esc_html__( 'Get the PRO version now', 'search-replace-for-elementor' ) . '</strong></a>'
 				);
 				?>
 			</p>
@@ -154,17 +154,17 @@ namespace DEVRY\ELEMSNR;
 
 			<div class="feature-screenshots">
 				<div>
-					<img src="<?php echo ELEMSNR_PLUGIN_IMG_URL; ?>feature-highlight.png" alt="Highlight feature" />
+					<img src="<?php echo esc_url( ELEMSNR_PLUGIN_IMG_URL ); ?>feature-highlight.png" alt="Highlight feature" />
 				</div>
 				<div>
-					<img src="<?php echo ELEMSNR_PLUGIN_IMG_URL; ?>feature-native.png" alt="Native search and replace feature" />
+					<img src="<?php echo esc_url( ELEMSNR_PLUGIN_IMG_URL ); ?>feature-native.png" alt="Native search and replace feature" />
 				</div>
 			</div>
 
 			<hr />
 
 			<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
-				<?php wp_nonce_field( 'elemsnr_security', 'elemsnr_nonce' ); ?>
+				<?php wp_nonce_field( 'elemsnr_settings_nonce', 'elemsnr_wpnonce' ); ?>
 				<?php
 					settings_fields( ELEMSNR_SETTINGS_SLUG );
 					do_settings_sections( ELEMSNR_SETTINGS_SLUG );
@@ -194,7 +194,7 @@ namespace DEVRY\ELEMSNR;
 							__( 'If something is not clear, please open a ticket on the official plugin %1$s. All tickets should be addressed within a couple of working days.', 'search-replace-for-elementor' ),
 							json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true )
 						),
-						'<a href="' . esc_url( ELEMSNR_PLUGIN_WPORG_RATE ) . '" target="_blank">' . esc_html__( 'Support Forum', 'search-replace-for-elementor' ) . '</a>'
+						'<a href="' . esc_url( ELEMSNR_PLUGIN_WPORG_SUPPORT ) . '" target="_blank">' . esc_html__( 'Support Forum', 'search-replace-for-elementor' ) . '</a>'
 					);
 					?>
 				</p>
@@ -206,13 +206,13 @@ namespace DEVRY\ELEMSNR;
 				</p>
 				<p>
 					<strong><?php echo esc_html__( 'Having issues?', 'search-replace-for-elementor' ); ?></strong> 
-					<a href="<?php echo esc_url( ELEMSNR_PLUGIN_WPORG_RATE ); ?>" target="_blank">
+					<a href="<?php echo esc_url( ELEMSNR_PLUGIN_WPORG_SUPPORT ); ?>" target="_blank">
 						<?php echo esc_html__( 'Create a Support Ticket', 'search-replace-for-elementor' ); ?>
 					</a>
 				</p>
 				<p>
 					<strong><?php echo esc_html__( 'Developed by', 'search-replace-for-elementor' ); ?></strong>
-					<a href="https://<?php echo esc_url( ELEMSNR_PLUGIN_DOMAIN ); ?>" target="_blank">
+					<a href="https://krasenslavov.com/" target="_blank">
 						<?php echo esc_html__( 'Krasen Slavov @ Developry', 'search-replace-for-elementor' ); ?>
 					</a>
 				</p>

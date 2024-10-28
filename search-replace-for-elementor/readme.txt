@@ -6,7 +6,7 @@ Tags: elementor, replace, elementor pro, search, addon
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.2
-Stable tag: 1.4.2.3
+Stable tag: 1.4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -124,6 +124,24 @@ The installation process for the plugin is standard and user-friendly. Please in
 1. Now you can go to any page/post that uses Elementor and use the plugin as described in the documentation.
 
 ## CHANGELOG
+
+= 1.4.3 =
+
+- Fix - Mismatched text domain.
+- Fix - Missing `$domain` parameter in function call.
+- Fix - Not unslashed before sanitization. Use `wp_unslash()` or similar.
+- Fix - Detected usage of a non-sanitized input variable.
+- Fix - All output should be run through an escaping function.
+- Fix - Detected usage of a possibly undefined superglobal array index. Use `isset()` or `empty()` to check the index exists before using it.
+- Fix - `strip_tags()` is discouraged. Use the more comprehensive `wp_strip_all_tags()` instead.
+- Update - Replace all php files end of line sequence from `CRLF` to `LF`.
+- Update - Don't show up the rating notice when toggle plugin activate/deactivate. 
+- Update - Replace `MLR_PLUGIN_DOMAIN` with krasenslavov.com in Settings main page.
+- Update - Make `_wpnonce` standard throughout the plugin php and js files.
+- Update - Revisit the `addNavMenuEditorTopBar()` target and add timeout. 
+- Update - Update the correct support ticket link with `ELEMSNR_PLUGIN_WPORG_SUPPORT`.
+- Update - Regenerate the .pot file.
+- Update - Compatibility check with Elementor 3.25
 
 = 1.4.2 =
 

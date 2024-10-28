@@ -19,14 +19,14 @@ function elemsnr_highlight_search() {
 	$elemsnr       = new Elementor_Search_Replace();
 	$elemsnr_admin = new ELEMSNR_Admin();
 
-	$current_post_id     = sanitize_text_field( $_REQUEST['current_post_id'] );
-	$search_phrase       = trim( sanitize_text_field( $_REQUEST['search_phrase'] ) );
-	$replace_with_phrase = trim( sanitize_text_field( $_REQUEST['replace_with_phrase'] ) );
-	$is_highlighted      = filter_var( sanitize_text_field( $_REQUEST['is_highlighted'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_text_only        = filter_var( sanitize_text_field( $_REQUEST['is_text_only'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_case_sensitive   = filter_var( sanitize_text_field( $_REQUEST['is_case_sensitive'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_links            = filter_var( sanitize_text_field( $_REQUEST['is_links'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_images           = filter_var( sanitize_text_field( $_REQUEST['is_images'] ), FILTER_VALIDATE_BOOLEAN );
+	$current_post_id     = ( isset( $_REQUEST['current_post_id'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['current_post_id'] ) ) : '';
+	$search_phrase       = isset( $_REQUEST['search_phrase'] ) ? trim( sanitize_text_field( wp_unslash( $_REQUEST['search_phrase'] ) ) ) : '';
+	$replace_with_phrase = isset( $_REQUEST['replace_with_phrase'] ) ? trim( sanitize_text_field( wp_unslash( $_REQUEST['replace_with_phrase'] ) ) ) : '';
+	$is_highlighted      = isset( $_REQUEST['is_highlighted'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_highlighted'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_text_only        = isset( $_REQUEST['is_text_only'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_text_only'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_case_sensitive   = isset( $_REQUEST['is_case_sensitive'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_case_sensitive'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_links            = isset( $_REQUEST['is_links'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_links'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_images           = isset( $_REQUEST['is_images'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_images'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
 
 	$current_post_data   = get_post_meta( $current_post_id, '_elementor_data', true );
 	$elementor_data      = json_decode( $current_post_data, true );
@@ -110,14 +110,14 @@ function elemsnr_unhighlight_search() {
 	$elemsnr       = new Elementor_Search_Replace();
 	$elemsnr_admin = new ELEMSNR_Admin();
 
-	$current_post_id     = sanitize_text_field( $_REQUEST['current_post_id'] );
-	$search_phrase       = trim( sanitize_text_field( $_REQUEST['search_phrase'] ) );
-	$replace_with_phrase = trim( sanitize_text_field( $_REQUEST['replace_with_phrase'] ) );
-	$is_highlighted      = filter_var( sanitize_text_field( $_REQUEST['is_highlighted'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_text_only        = filter_var( sanitize_text_field( $_REQUEST['is_text_only'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_case_sensitive   = filter_var( sanitize_text_field( $_REQUEST['is_case_sensitive'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_links            = filter_var( sanitize_text_field( $_REQUEST['is_links'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_images           = filter_var( sanitize_text_field( $_REQUEST['is_images'] ), FILTER_VALIDATE_BOOLEAN );
+	$current_post_id     = ( isset( $_REQUEST['current_post_id'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['current_post_id'] ) ) : '';
+	$search_phrase       = isset( $_REQUEST['search_phrase'] ) ? trim( sanitize_text_field( wp_unslash( $_REQUEST['search_phrase'] ) ) ) : '';
+	$replace_with_phrase = isset( $_REQUEST['replace_with_phrase'] ) ? trim( sanitize_text_field( wp_unslash( $_REQUEST['replace_with_phrase'] ) ) ) : '';
+	$is_highlighted      = isset( $_REQUEST['is_highlighted'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_highlighted'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_text_only        = isset( $_REQUEST['is_text_only'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_text_only'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_case_sensitive   = isset( $_REQUEST['is_case_sensitive'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_case_sensitive'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_links            = isset( $_REQUEST['is_links'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_links'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_images           = isset( $_REQUEST['is_images'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_images'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
 
 	$current_post_data   = get_post_meta( $current_post_id, '_elementor_data', true );
 	$elementor_data      = json_decode( $current_post_data, true );
@@ -162,14 +162,14 @@ function elemsnr_replace_search() {
 	$elemsnr       = new Elementor_Search_Replace();
 	$elemsnr_admin = new ELEMSNR_Admin();
 
-	$current_post_id     = sanitize_text_field( $_REQUEST['current_post_id'] );
-	$search_phrase       = trim( sanitize_text_field( $_REQUEST['search_phrase'] ) );
-	$replace_with_phrase = trim( sanitize_text_field( $_REQUEST['replace_with_phrase'] ) );
-	$is_highlighted      = filter_var( sanitize_text_field( $_REQUEST['is_highlighted'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_text_only        = filter_var( sanitize_text_field( $_REQUEST['is_text_only'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_case_sensitive   = filter_var( sanitize_text_field( $_REQUEST['is_case_sensitive'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_links            = filter_var( sanitize_text_field( $_REQUEST['is_links'] ), FILTER_VALIDATE_BOOLEAN );
-	$is_images           = filter_var( sanitize_text_field( $_REQUEST['is_images'] ), FILTER_VALIDATE_BOOLEAN );
+	$current_post_id     = ( isset( $_REQUEST['current_post_id'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['current_post_id'] ) ) : '';
+	$search_phrase       = isset( $_REQUEST['search_phrase'] ) ? trim( sanitize_text_field( wp_unslash( $_REQUEST['search_phrase'] ) ) ) : '';
+	$replace_with_phrase = isset( $_REQUEST['replace_with_phrase'] ) ? trim( sanitize_text_field( wp_unslash( $_REQUEST['replace_with_phrase'] ) ) ) : '';
+	$is_highlighted      = isset( $_REQUEST['is_highlighted'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_highlighted'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_text_only        = isset( $_REQUEST['is_text_only'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_text_only'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_case_sensitive   = isset( $_REQUEST['is_case_sensitive'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_case_sensitive'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_links            = isset( $_REQUEST['is_links'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_links'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
+	$is_images           = isset( $_REQUEST['is_images'] ) ? filter_var( sanitize_text_field( wp_unslash( $_REQUEST['is_images'] ) ), FILTER_VALIDATE_BOOLEAN ) : '';
 
 	$current_post_data   = get_post_meta( $current_post_id, '_elementor_data', true );
 	$elementor_data      = json_decode( $current_post_data, true );
@@ -249,9 +249,11 @@ function elemsnr_replace_html_regex() {
 	$elemsnr       = new Elementor_Search_Replace();
 	$elemsnr_admin = new ELEMSNR_Admin();
 
-	$current_post_id     = sanitize_text_field( $_REQUEST['current_post_id'] );
-	$search_phrase       = trim( $_REQUEST['search_phrase'] ); // TODO: We don't use sanitize_text_field(); becuase HTML is used in regexp.
-	$replace_with_phrase = trim( $_REQUEST['replace_with_phrase'] );
+	$current_post_id = ( isset( $_REQUEST['current_post_id'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['current_post_id'] ) ) : '';
+	// We don't use sanitize_text_field() or wp_unslash()
+	// becuase they are used in regexp functionlity.
+	$search_phrase       = ( isset( $_REQUEST['search_phrase'] ) ) ? trim( $_REQUEST['search_phrase'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized	
+	$replace_with_phrase = ( isset( $_REQUEST['replace_with_phrase'] ) ) ? trim( $_REQUEST['replace_with_phrase'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized	
 
 	$current_post_data   = get_post_meta( $current_post_id, '_elementor_data', true );
 	$elementor_data      = json_decode( $current_post_data, true );

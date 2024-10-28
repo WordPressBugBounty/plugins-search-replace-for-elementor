@@ -33,18 +33,18 @@ function elemsnr_display_upgrade_notice() {
 	}
 	?>
 		<div class="notice notice-success is-dismissible elemsnr-admin">
-			<h3><?php echo esc_html__( 'Elementor Search and Replace PRO 🚀' ); ?></h3>
+			<h3><?php echo esc_html__( 'Elementor Search and Replace PRO 🚀', 'search-replace-for-elementor' ); ?></h3>
 			<p>
 				<?php
 				printf(
 					wp_kses(
 						/* translators: %1$s is replaced with Found the free version helpful */
 						/* translators: %2$s is replaced with Elementor Search and Replace Pro */
-						__( '✨🎉📢 %1$s? Would you be interested in learning more about the benefits of upgrading to the %2$s? ' ),
+						__( '✨🎉📢 %1$s? Would you be interested in learning more about the benefits of upgrading to the %2$s?', 'search-replace-for-elementor' ),
 						json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true )
 					),
-					'<strong>' . esc_html__( 'Found the free version helpful', 'featured-image-plus' ) . '</strong>',
-					'<strong>' . esc_html__( 'Elementor Search and Replace Pro', 'featured-image-plus' ) . '</strong>'
+					'<strong>' . esc_html__( 'Found the free version helpful', 'search-replace-for-elementor' ) . '</strong>',
+					'<strong>' . esc_html__( 'Elementor Search and Replace Pro', 'search-replace-for-elementor' ) . '</strong>'
 				);
 				?>
 				<!-- <br /> -->
@@ -53,24 +53,24 @@ function elemsnr_display_upgrade_notice() {
 				// 	wp_kses(
 				// 		/* translators: %1$s is replaced with promo code */
 				// 		/* translators: %2$s is replaced with 10% off */
-				// 		__( 'Use the %1$s code and get %2$s your purchase!' ),
+				// 		__( 'Use the %1$s code and get %2$s your purchase!', 'search-replace-for-elementor' ),
 				// 		json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true )
 				// 	),
-				// 	'<code>' . esc_html__( 'ELEMSNR10', 'featured-image-plus' ) . '</code>',
-				// 	'<strong>' . esc_html__( '10% off', 'featured-image-plus' ) . '</strong>'
+				// 	'<code>' . esc_html__( 'ELEMSNR10', 'search-replace-for-elementor' ) . '</code>',
+				// 	'<strong>' . esc_html__( '10% off', 'search-replace-for-elementor' ) . '</strong>'
 				// );
 				?>
 			</p>
 			<div class="button-group">
 				<a href="https://bit.ly/43dazVP" target="_blank" class="button button-primary button-success">
-					<?php echo esc_html__( 'Go Pro', 'featured-image-plus' ); ?>
+					<?php echo esc_html__( 'Go Pro', 'search-replace-for-elementor' ); ?>
 					<i class="dashicons dashicons-external"></i>
 				</a>
 				<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'elemsnr_settings', 'action' => 'elemsnr_dismiss_upgrade_notice', '_wpnonce' => wp_create_nonce( 'elemsnr_upgrade_notice_nonce' ) ), admin_url( 'admin.php' ) ) ); ?>" class="button">
-					<?php echo esc_html__( 'I already did', 'featured-image-plus' ); ?>
+					<?php echo esc_html__( 'I already did', 'search-replace-for-elementor' ); ?>
 				</a>
 				<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'elemsnr_settings', 'action' => 'elemsnr_dismiss_upgrade_notice', '_wpnonce' => wp_create_nonce( 'elemsnr_upgrade_notice_nonce' ) ), admin_url( 'admin.php' ) ) ); ?>" class="button">
-					<?php echo esc_html__( "Don't show this notice again!", 'featured-image-plus' ); ?>
+					<?php echo esc_html__( "Don't show this notice again!", 'search-replace-for-elementor' ); ?>
 				</a>
 			</div>
 		</div>

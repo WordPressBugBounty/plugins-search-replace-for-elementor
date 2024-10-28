@@ -3,9 +3,9 @@
  * Plugin Name: Search & Replace for Elementor
  * Plugin URI: https://searchreplaceplugin.com/
  * Description: Easily search and replace any text, links, and images inside the Elementor editor.
- * Version: 1.4.2.3
- * Elementor tested up to: 3.24
- * Elementor Pro tested up to: 3.24
+ * Version: 1.4.3
+ * Elementor tested up to: 3.25
+ * Elementor Pro tested up to: 3.25
  * Author: Krasen Slavov
  * Author URI: https://developry.com/
  * License: GPLv2 or later
@@ -42,7 +42,7 @@ define( __NAMESPACE__ . '\ELEMSNR_MIN_ELEMENTOR_VERSION', '2.0' );
 define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_UUID', 'elemsnr' );
 define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_TEXTDOMAIN', 'search-replace-for-elementor' );
 define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_NAME', esc_html__( 'Search & Replace for Elementor', 'search-replace-for-elementor' ) );
-define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_VERSION', '1.4.2.3' );
+define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_VERSION', '1.4.3' );
 define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_DOMAIN', 'searchreplaceplugin.com' );
 define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_DOCS', 'https://searchreplaceplugin.com/help' );
 

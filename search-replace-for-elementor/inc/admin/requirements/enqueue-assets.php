@@ -49,7 +49,7 @@ function elemsnr_enqueue_admin_assets() {
 			'plugin_url'    => ELEMSNR_PLUGIN_DIR_URL,
 			'plugin_domain' => ELEMSNR_PLUGIN_DOMAIN,
 			'ajax_url'      => esc_url( admin_url( 'admin-ajax.php' ) ),
-			'ajax_nonce'    => wp_create_nonce( 'elemsnr-ajax-nonce' ),
+			'ajax_nonce'    => wp_create_nonce( 'elemsnr_ajax_nonce' ),
 		)
 	);
 }
@@ -81,7 +81,7 @@ function elemsnr_enqueue_elementor_assets() {
 			'plugin_url'    => ELEMSNR_PLUGIN_DIR_URL,
 			'plugin_domain' => ELEMSNR_PLUGIN_DOMAIN,
 			'ajax_url'      => admin_url( 'admin-ajax.php' ),
-			'ajax_nonce'    => wp_create_nonce( 'elemsnr-ajax-nonce' ),
+			'ajax_nonce'    => wp_create_nonce( 'elemsnr_ajax_nonce' ),
 		)
 	);
 }

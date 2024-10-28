@@ -68,7 +68,7 @@ if ( ! class_exists( 'ELEMSNR_Admin' ) ) {
 		 * Check the validity of the nonce token for the plugin's AJAX requests.
 		 */
 		public function check_nonce_token() {
-			if ( ! check_ajax_referer( 'elemsnr-ajax-nonce', 'security', false ) ) {
+			if ( ! check_ajax_referer( 'elemsnr_ajax_nonce', '_wpnonce', false ) ) {
 				return false;
 			}
 
