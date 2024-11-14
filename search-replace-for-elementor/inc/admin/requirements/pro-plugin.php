@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\ELEMSNR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.3
  */
 
@@ -28,7 +28,10 @@ register_activation_hook( ELEMSNR_PLUGIN_BASENAME, __NAMESPACE__ . '\elemsnr_che
  * Display a promotion for the pro plugin.
  */
 function elemsnr_display_upgrade_notice() {
-	if ( get_option( 'elemsnr_upgrade_notice' ) && get_transient( 'elemsnr_upgrade_plugin' ) ) {
+	$elemsnr_admin = new ELEMSNR_Admin();
+
+	if ( get_option( 'elemsnr_upgrade_notice' )
+		&& get_transient( 'elemsnr_upgrade_plugin' ) ) {
 		return;
 	}
 	?>
@@ -66,10 +69,10 @@ function elemsnr_display_upgrade_notice() {
 					<?php echo esc_html__( 'Go Pro', 'search-replace-for-elementor' ); ?>
 					<i class="dashicons dashicons-external"></i>
 				</a>
-				<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'elemsnr_settings', 'action' => 'elemsnr_dismiss_upgrade_notice', '_wpnonce' => wp_create_nonce( 'elemsnr_upgrade_notice_nonce' ) ), admin_url( 'admin.php' ) ) ); ?>" class="button">
+				<a href="<?php echo esc_url( admin_url( $elemsnr_admin->admin_page . ELEMSNR_SETTINGS_SLUG . '&_wpnonce=' . wp_create_nonce( 'elemsnr_upgrade_notice_nonce' ) . '&action=elemsnr_dismiss_upgrade_notice' ) ); ?>" class="button">
 					<?php echo esc_html__( 'I already did', 'search-replace-for-elementor' ); ?>
 				</a>
-				<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'elemsnr_settings', 'action' => 'elemsnr_dismiss_upgrade_notice', '_wpnonce' => wp_create_nonce( 'elemsnr_upgrade_notice_nonce' ) ), admin_url( 'admin.php' ) ) ); ?>" class="button">
+				<a href="<?php echo esc_url( admin_url( $elemsnr_admin->admin_page . ELEMSNR_SETTINGS_SLUG . '&_wpnonce=' . wp_create_nonce( 'elemsnr_upgrade_notice_nonce' ) . '&action=elemsnr_dismiss_upgrade_notice' ) ); ?>" class="button">
 					<?php echo esc_html__( "Don't show this notice again!", 'search-replace-for-elementor' ); ?>
 				</a>
 			</div>

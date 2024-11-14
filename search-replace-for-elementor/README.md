@@ -4,11 +4,11 @@ Contributors: krasenslavov, developry
 Donate Link: https://krasenslavov.com/hire-krasen/
 Tags: elementor, replace, elementor pro, search, addon 
 Requires at least: 5.0
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.2
-Stable tag: 1.4.3
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 1.4.4
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Easily search and replace any text, links, and images inside the Elementor editor with [**Search & Replace for Elementor**](https://bit.ly/43jOSU8).
 
@@ -125,6 +125,15 @@ The installation process for the plugin is standard and user-friendly. Please in
 
 ## CHANGELOG
 
+= 1.4.4 =
+
+- New - Add compact mode toggle under settings option
+- Update - Compatibility check with WordPress 6.7
+- Update - Compatibility check with Elementor 3.25
+- Update - Language file (.pot)
+- Update - Language file (.pot) header text
+- Update - Change license files to use GPLv3
+
 = 1.4.3 =
 
 - Fix - Mismatched text domain.
@@ -145,7 +154,7 @@ The installation process for the plugin is standard and user-friendly. Please in
 
 = 1.4.2 =
 
-- Update - PHP 8.3 compatibility check
+- Update - Compatibility check with PHP 8.3
 - Update - Compatibility check with Elementor 3.24
 
 = 1.4.1 =
@@ -175,7 +184,7 @@ The installation process for the plugin is standard and user-friendly. Please in
 = 1.3.6 =
 
 - New - Add the ability to search/replace link in the editor in text-only mode
-- Update - WordPress 6.5 compatibility check
+- Update - Compatibility check with WordPress 6.5
 - Fix - Use `strip_tags` with `wp_strip_all_tags` need to have the PHP function to allow tags
 - Fix - Remove the `WFL_` and replace with `ELEMSNR_`
 
@@ -266,9 +275,9 @@ The installation process for the plugin is standard and user-friendly. Please in
 = 1.2.1 =
 
 - New - Add support for Editor Top Bar feature for single pages
-- Update - Fully tested compatibility with WordPress 6.4
-- Update - Fully tested compatibility with Elementor 3.17
-- Update - Fully tested compatibility with PHP 8.1
+- Update - Compatibility check with WordPress 6.4
+- Update - Compatibility check with Elementor 3.17
+- Update - Compatibility check with PHP 8.1
 
 = 1.2.0 =
 
@@ -345,7 +354,7 @@ The installation process for the plugin is standard and user-friendly. Please in
 
 = 1.0.7 =
 
-- Update - WordPress 6.2 compatibility and testing
+- Update - Compatibility check with WordPress 6.2
 
 = 1.0.6 =
 

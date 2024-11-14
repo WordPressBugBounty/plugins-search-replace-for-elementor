@@ -4,14 +4,17 @@
  *
  * @package    DEVRY\ELEMSNR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
- * @since      1.3
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
+ * @since      1.5
  */
 
 namespace DEVRY\ELEMSNR;
 
 ! defined( ABSPATH ) || exit; // Exit if accessed directly.
 
+/**
+ * Display the setting.
+ */
 function elemsnr_display_compact_mode() {
 	$elemsnr = new Elementor_Search_Replace();
 
@@ -23,7 +26,7 @@ function elemsnr_display_compact_mode() {
 	}
 
 	printf(
-		'<select id="elemsnr-pro-compact-mode" name="elemsnr_compact_mode">
+		'<select id="elemsnr-compact-mode" name="elemsnr_compact_mode">
 			<option value="">No</option>
 			<option value="yes" %1$s>Yes</option>
 		</select>',
@@ -38,6 +41,9 @@ function elemsnr_display_compact_mode() {
 	<?php
 }
 
+/**
+ * Sanitize and update option.
+ */
 function elemsnr_sanitize_compact_mode( $compact_mode ) {
 	// Verify the nonce.
 	$_wpnonce = ( isset( $_REQUEST['elemsnr_wpnonce'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['elemsnr_wpnonce'] ) ) : '';
@@ -52,14 +58,18 @@ function elemsnr_sanitize_compact_mode( $compact_mode ) {
 	}
 
 	// Option changed and updated.
-	if ( get_option( 'elemsnr_compact_mode', '' ) !== $compact_mode ) {
+	if ( ! get_transient( 'elemsnr_settings_compact_mode' )
+		&& get_option( 'elemsnr_compact_mode', '' ) !== $compact_mode ) {
 		add_settings_error(
 			'elemsnr_settings_errors',
-			'elemsnr_compact_mode',
+			'elemsnr_settings_compact_mode',
 			esc_html__( 'Compact mode option was updated successfully.', 'search-replace-for-elementor' ),
 			'updated'
 		);
+
+		// Add transient to avoid double notice on initial Save when using settings_errors().
+		set_transient( 'elemsnr_settings_compact_mode', true, 5 );
 	}
 
-	return sanitize_text_field( $compact_mode );
+	return sanitize_text_field( wp_unslash( $compact_mode ) );
 }

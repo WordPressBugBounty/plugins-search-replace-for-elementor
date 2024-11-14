@@ -3,13 +3,13 @@
  * Plugin Name: Search & Replace for Elementor
  * Plugin URI: https://searchreplaceplugin.com/
  * Description: Easily search and replace any text, links, and images inside the Elementor editor.
- * Version: 1.4.3
+ * Version: 1.4.4
  * Elementor tested up to: 3.25
  * Elementor Pro tested up to: 3.25
  * Author: Krasen Slavov
  * Author URI: https://developry.com/
- * License: GPLv2 or later
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * License: GPLv3 or later
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: search-replace-for-elementor
  * Domain Path: /lang
  *
@@ -26,14 +26,14 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 */
 
 namespace DEVRY\ELEMSNR;
 
 ! defined( ABSPATH ) || exit; // Exit if accessed directly.
 
-define( __NAMESPACE__ . '\ELEMSNR_ENV', 'prod' ); // prod, dev
+define( __NAMESPACE__ . '\ELEMSNR_ENV', 'prod' ); // Use prod, dev options.
 
 define( __NAMESPACE__ . '\ELEMSNR_MIN_PHP_VERSION', '7.2' );
 define( __NAMESPACE__ . '\ELEMSNR_MIN_WP_VERSION', '5.0' );
@@ -42,7 +42,7 @@ define( __NAMESPACE__ . '\ELEMSNR_MIN_ELEMENTOR_VERSION', '2.0' );
 define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_UUID', 'elemsnr' );
 define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_TEXTDOMAIN', 'search-replace-for-elementor' );
 define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_NAME', esc_html__( 'Search & Replace for Elementor', 'search-replace-for-elementor' ) );
-define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_VERSION', '1.4.3' );
+define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_VERSION', '1.4.4' );
 define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_DOMAIN', 'searchreplaceplugin.com' );
 define( __NAMESPACE__ . '\ELEMSNR_PLUGIN_DOCS', 'https://searchreplaceplugin.com/help' );
 

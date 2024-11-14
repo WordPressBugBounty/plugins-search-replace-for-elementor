@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\ELEMSNR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.3
  */
 
@@ -17,6 +17,8 @@ namespace DEVRY\ELEMSNR;
  * on WordPress.org and provide options to dismiss the notice.
  */
 function elemsnr_display_rating_notice() {
+	$elemsnr_admin = new ELEMSNR_Admin();
+
 	if ( ! get_option( 'elemsnr_rating_notice', '' ) ) {
 		?>
 			<div class="notice notice-info is-dismissible elemsnr-admin">
@@ -38,10 +40,10 @@ function elemsnr_display_rating_notice() {
 						<?php echo esc_html__( 'Rate us @ WordPress.org', 'search-replace-for-elementor' ); ?>
 						<i class="dashicons dashicons-external"></i>
 					</a>
-					<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'elemsnr_settings', 'action' => 'elemsnr_dismiss_rating_notice', '_wpnonce' => wp_create_nonce( 'elemsnr_rating_notice_nonce' ) ), admin_url( 'admin.php' ) ) ); ?>" class="button">
+					<a href="<?php echo esc_url( admin_url( $elemsnr_admin->admin_page . ELEMSNR_SETTINGS_SLUG . '&_wpnonce=' . wp_create_nonce( 'elemsnr_rating_notice_nonce' ) . '&action=elemsnr_dismiss_rating_notice' ) ); ?>" class="button">
 						<?php echo esc_html__( 'I already did', 'search-replace-for-elementor' ); ?>
 					</a>
-					<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'elemsnr_settings', 'action' => 'elemsnr_dismiss_rating_notice', '_wpnonce' => wp_create_nonce( 'elemsnr_rating_notice_nonce' ) ), admin_url( 'admin.php' ) ) ); ?>" class="button">
+					<a href="<?php echo esc_url( admin_url( $elemsnr_admin->admin_page . ELEMSNR_SETTINGS_SLUG . '&_wpnonce=' . wp_create_nonce( 'elemsnr_rating_notice_nonce' ) . '&action=elemsnr_dismiss_rating_notice' ) ); ?>" class="button">
 						<?php echo esc_html__( "Don't show this notice again!", 'search-replace-for-elementor' ); ?>
 					</a>
 				</div>

@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\ELEMSNR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.3
  */
 
@@ -21,10 +21,16 @@ if ( ! class_exists( 'ELEMSNR_Admin' ) ) {
 		public $data_size_limit;
 
 		/**
+		 * Main menu admin page based on the compact mode.
+		 */
+		public $admin_page;
+
+		/**
 		 * Consturtor.
 		 */
 		public function __construct() {
 			$this->data_size_limit = 300;
+			$this->admin_page      = ( ! get_option( 'elemsnr_compact_mode', '' ) ) ? 'admin.php?page=' : 'admin.php?page=';
 		}
 
 		/**

@@ -1,6 +1,6 @@
 # Search & Replace for Elementor - Easily search and replace any text, links, and images inside the Elementor editor.
-# Copyright (C) 2024 Search & Replace for Elementor
-# This file is distributed under the same license as the plugin, GPLv2 or later.
+# Copyright (c) 2024 Search & Replace for Elementor
+# This file is distributed under the same license as the plugin, GPLv3 or later.
 # Krasen Slavov <contact@searchreplaceplugin.com>, 2024.
 #, fuzzy
 msgid ""
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: 1.1\n"
 "Report-Msgid-Bugs-To: Search & Replace for Elementor <contact@searchreplaceplugin.com>\n"
 "POT-Creation-Date: 2023-03-07 17:19+0200\n"
-"PO-Revision-Date: 2024-03-30 17:19+0200\n"
+"PO-Revision-Date: 2024-11-14 17:19+0200\n"
 "Last-Translator: Krasen Slavov <contact@searchreplaceplugin.com>\n"
-"Language-Team: ELSNR <contact@searchreplaceplugin.com>\n"
+"Language-Team: ELEMSNR <contact@searchreplaceplugin.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,8 +21,9 @@ msgstr ""
 #: search-replace-for-elementor.php:44
 #: inc/admin/requirements/check-elementor.php:27
 #: inc/admin/requirements/check-elementor.php:51
-#: inc/admin/settings/settings-main-page.php:114
-#: inc/admin/settings/settings-menu.php:21
+#: inc/admin/settings/settings-main-page.php:115
+#: inc/admin/settings/settings-menu.php:23
+#: inc/admin/settings/settings-menu.php:34
 msgid "Search & Replace for Elementor"
 msgstr ""
 
@@ -69,23 +70,23 @@ msgstr ""
 msgid "%1$s was replaced with %2$s %3$s time(s). %4$s"
 msgstr ""
 
-#: inc/admin/elementor/elementor-actions.php:269
+#: inc/admin/elementor/elementor-actions.php:271
 msgid "Please enter search and replace with field values."
 msgstr ""
 
 #. translators: %1$s is replaced with RegEx/search phrase
 #. translators: %2$s is replaced with HTML/replace phrase
-#: inc/admin/elementor/elementor-actions.php:307
+#: inc/admin/elementor/elementor-actions.php:309
 #, php-format
 msgid "Regex %1$s was used and replaced with %2$s."
 msgstr ""
 
-#: inc/admin/requirements/action-links.php:21
+#: inc/admin/requirements/action-links.php:23
 msgid "Settings"
 msgstr ""
 
-#: inc/admin/requirements/action-links.php:24
-#: inc/admin/requirements/pro-plugin.php:64
+#: inc/admin/requirements/action-links.php:26
+#: inc/admin/requirements/pro-plugin.php:69
 msgid "Go Pro"
 msgstr ""
 
@@ -112,79 +113,71 @@ msgstr ""
 #. translators: %1$s is replaced with "Plugin Name"
 #. translators: %2$s is replaced with "Min PHP Version"
 #. translators: %3$s is replaced with "Min WP Version"
-#: inc/admin/requirements/check-requirements.php:71
+#: inc/admin/requirements/check-requirements.php:76
 #, php-format
 msgid "%1$s requires a minimum of PHP %2$s and WordPress %3$s"
 msgstr ""
 
 #. translators: %1$s is replaced with "PHP Version"
 #. translators: %2$s is replaced with "WordPress Version"
-#: inc/admin/requirements/check-requirements.php:80
+#: inc/admin/requirements/check-requirements.php:85
 #, php-format
 msgid "You are currently running PHP %1$s and WordPress %2$s."
 msgstr ""
 
 #. translators: %1$s is replaced with by giving it 5 stars rating
-#: inc/admin/requirements/notice-rating.php:29
+#: inc/admin/requirements/notice-rating.php:31
 #, php-format
 msgid ""
 "✨💪🔌 Could you please kindly help the plugin in your turn %1$s? (Thank you in "
-"advance) "
+"advance)"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:32
+#: inc/admin/requirements/notice-rating.php:34
 msgid "by giving it 5 stars rating"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:38
+#: inc/admin/requirements/notice-rating.php:40
 msgid "Rate us @ WordPress.org"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:42
-#: inc/admin/requirements/pro-plugin.php:68
+#: inc/admin/requirements/notice-rating.php:44
+#: inc/admin/requirements/pro-plugin.php:73
 msgid "I already did"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:45
-#: inc/admin/requirements/pro-plugin.php:71
+#: inc/admin/requirements/notice-rating.php:47
+#: inc/admin/requirements/pro-plugin.php:76
 msgid "Don't show this notice again!"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:34
+#: inc/admin/requirements/pro-plugin.php:39
 msgid "Elementor Search and Replace PRO 🚀"
 msgstr ""
 
 #. translators: %1$s is replaced with Found the free version helpful
 #. translators: %2$s is replaced with Elementor Search and Replace Pro
-#: inc/admin/requirements/pro-plugin.php:41
+#: inc/admin/requirements/pro-plugin.php:46
 #, php-format
 msgid ""
 "✨🎉📢 %1$s? Would you be interested in learning more about the benefits of "
-"upgrading to the %2$s? "
+"upgrading to the %2$s?"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:44
+#: inc/admin/requirements/pro-plugin.php:49
 msgid "Found the free version helpful"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:45
+#: inc/admin/requirements/pro-plugin.php:50
 msgid "Elementor Search and Replace Pro"
 msgstr ""
 
-#. translators: %1$s is replaced with promo code
-#. translators: %2$s is replaced with 10% off
-#: inc/admin/requirements/pro-plugin.php:54
-#, php-format
-msgid "Use the %1$s code and get %2$s your purchase!"
+#: inc/admin/settings/compact-mode.php:38
+msgid "Compact mode will add a sub-menu to Elementor."
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:57
-msgid "ELEMSNR10"
-msgstr ""
-
-#: inc/admin/requirements/pro-plugin.php:58
-#, php-format
-msgid "10% off"
+#: inc/admin/settings/compact-mode.php:63
+msgid "Compact mode option was updated successfully."
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:20
@@ -221,6 +214,7 @@ msgstr ""
 #: inc/admin/settings/settings-main-page.php:56
 #: inc/admin/settings/settings-main-page.php:61
 #: inc/admin/settings/settings-main-page.php:66
+#: inc/admin/settings/settings-main-page.php:71
 #: inc/admin/settings/settings-main-page.php:76
 #: inc/admin/settings/settings-main-page.php:86
 msgid "yes"
@@ -250,6 +244,7 @@ msgstr ""
 #: inc/admin/settings/settings-main-page.php:55
 #: inc/admin/settings/settings-main-page.php:60
 #: inc/admin/settings/settings-main-page.php:65
+#: inc/admin/settings/settings-main-page.php:70
 #: inc/admin/settings/settings-main-page.php:75
 #: inc/admin/settings/settings-main-page.php:85
 msgid "no"
@@ -268,15 +263,7 @@ msgid "Search by field keys or widgets"
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:69
-msgid "Unfiltered URLs"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:70
-msgid "default"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:71
-msgid "pro"
+msgid "Unfiltered/Partial URLs"
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:74
@@ -308,7 +295,7 @@ msgid "delayed"
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:91
-msgid "first release"
+msgid "priority"
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:101
@@ -319,54 +306,58 @@ msgstr ""
 msgid "Watch Video"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:118
+#: inc/admin/settings/settings-main-page.php:119
 msgid ""
 "Quickly and easily search and replace any text, links, and images inside the "
 "Elementor editor."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:130
+#: inc/admin/settings/settings-main-page.php:129
 msgid "Get the PRO version now"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:152
+#: inc/admin/settings/settings-main-page.php:150
 msgid "Note"
 msgstr ""
 
+#: inc/admin/settings/settings-main-page.php:180
+msgid "Save"
+msgstr ""
+
 #. translators: %1$s is replaced with "Link to WP.org support forums"
-#: inc/admin/settings/settings-main-page.php:165
+#: inc/admin/settings/settings-main-page.php:195
 #, php-format
 msgid ""
 "If something is not clear, please open a ticket on the official plugin %1$s. "
 "All tickets should be addressed within a couple of working days."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:168
+#: inc/admin/settings/settings-main-page.php:198
 msgid "Support Forum"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:173
+#: inc/admin/settings/settings-main-page.php:203
 msgid "Please rate us"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:179
+#: inc/admin/settings/settings-main-page.php:209
 msgid "Having issues?"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:181
+#: inc/admin/settings/settings-main-page.php:211
 msgid "Create a Support Ticket"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:185
+#: inc/admin/settings/settings-main-page.php:215
 msgid "Developed by"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:187
+#: inc/admin/settings/settings-main-page.php:217
 msgid "Krasen Slavov @ Developry"
 msgstr ""
 
 #. translators: %1$s is replaced with "Link to Patreon account for support"
-#: inc/admin/settings/settings-main-page.php:200
+#: inc/admin/settings/settings-main-page.php:230
 #, php-format
 msgid ""
 "* For the price of a cup of coffee per month, you can %1$s in continuing to "
@@ -374,91 +365,99 @@ msgid ""
 "helps and is greatly appreciated!"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:203
+#: inc/admin/settings/settings-main-page.php:233
 msgid "help and support me on Patreon"
 msgstr ""
 
-#: inc/admin/settings/settings-menu.php:22
+#: inc/admin/settings/settings-menu.php:24
+msgid "Elementor S/R"
+msgstr ""
+
+#: inc/admin/settings/settings-menu.php:35
 msgid "Search & Replace"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:33
+msgid "Compact Mode"
 msgstr ""
 
 #. translators: %1$s is replaced with Invalid security toke
 #. translators: %2$s is replaced with link to Support email
-#: inc/library/class-elemsnr-admin.php:85
+#: inc/library/class-elemsnr-admin.php:91
 #, php-format
 msgid "%1$s! Contact us @ %2$s."
 msgstr ""
 
-#: inc/library/class-elemsnr-admin.php:87
+#: inc/library/class-elemsnr-admin.php:93
 msgid "Invalid security token"
 msgstr ""
 
 #. translators: %1$s is replaced with Access denied
-#: inc/library/class-elemsnr-admin.php:118
+#: inc/library/class-elemsnr-admin.php:124
 #, php-format
 msgid ""
 "%1$s! Current user does not have the capabilities to access this function."
 msgstr ""
 
-#: inc/library/class-elemsnr-admin.php:119
+#: inc/library/class-elemsnr-admin.php:125
 msgid "Access denied"
 msgstr ""
 
 #. translators: %1$s is replaced with link to support email
-#: inc/library/class-elemsnr-admin.php:135
+#: inc/library/class-elemsnr-admin.php:141
 #, php-format
 msgid "Post ID not found! Contact the plugin author @ %1$s."
 msgstr ""
 
 #. translators: %1$s is replaced with data limit
 #. translators: %2$s is replaced with link to options page
-#: inc/library/class-elemsnr-admin.php:153
+#: inc/library/class-elemsnr-admin.php:159
 #, php-format
 msgid ""
 "Elementor page/post data exceeds the set limit of %1$skb! Update data limit "
 "on the %2$s page to increase the set limit."
 msgstr ""
 
-#: inc/library/class-elemsnr-admin.php:156
+#: inc/library/class-elemsnr-admin.php:162
 msgid "Options"
 msgstr ""
 
 #. translators: %1$s is replaced with link to support email
-#: inc/library/class-elemsnr-admin.php:173
+#: inc/library/class-elemsnr-admin.php:179
 #, php-format
 msgid ""
 "Elementor data is empty! Add some content to this page or contact us @ %1$s."
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:234
+#: inc/library/class-elemsnr-data-formatter.php:241
 msgid "No error!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:236
+#: inc/library/class-elemsnr-data-formatter.php:243
 msgid "Internal error!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:238
+#: inc/library/class-elemsnr-data-formatter.php:245
 msgid "Backtrack limit exhausted!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:240
+#: inc/library/class-elemsnr-data-formatter.php:247
 msgid "Recursion limit exhausted!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:242
+#: inc/library/class-elemsnr-data-formatter.php:249
 msgid "Malformed UTF-8 characters, possibly incorrectly encoded!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:244
+#: inc/library/class-elemsnr-data-formatter.php:251
 msgid ""
 "The offset did not correspond to the beginning of a valid UTF-8 code point!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:246
+#: inc/library/class-elemsnr-data-formatter.php:253
 msgid "JIT stack limit exhausted!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:248
+#: inc/library/class-elemsnr-data-formatter.php:255
 msgid "Unknown error!"
 msgstr ""

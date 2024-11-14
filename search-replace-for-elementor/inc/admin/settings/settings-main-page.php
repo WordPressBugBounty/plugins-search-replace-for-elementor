@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\ELEMSNR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.3
  */
 
@@ -164,6 +164,7 @@ namespace DEVRY\ELEMSNR;
 			<hr />
 
 			<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
+				<?php settings_errors( 'elemsnr_settings_errors' ); ?>
 				<?php wp_nonce_field( 'elemsnr_settings_nonce', 'elemsnr_wpnonce' ); ?>
 				<?php
 					settings_fields( ELEMSNR_SETTINGS_SLUG );

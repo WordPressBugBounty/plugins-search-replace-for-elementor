@@ -1,7 +1,7 @@
-.gitignore
-.git/
-composer.json
 node_modules/
+.git/
+.gitignore
+gulpfile.js
+composer.json
 package.json
 package-lock.json
-gulpfile.js

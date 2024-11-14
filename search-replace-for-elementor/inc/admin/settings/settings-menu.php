@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\ELEMSNR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.3
  */
 
@@ -26,7 +26,7 @@ function elemsnr_add_menu() {
 			ELEMSNR_SETTINGS_SLUG,
 			__NAMESPACE__ . '\elemsnr_display_settings_page',
 			'dashicons-search',
-			25.5555
+			57.999
 		);
 	} else {
 		add_submenu_page(
