@@ -86,6 +86,20 @@ if ( ! class_exists( 'Elementor_Search_Replace' ) ) {
 		}
 
 		/**
+		 * Count all occurrences for the search phrase.
+		 */
+		public function count_search_occurrences( $elementor_data, $settings ) {
+			return $this->search_and_replace(
+				$elementor_data,
+				array_merge(
+					$settings,
+					array( 'count' => true ),
+				),
+				'count'
+			);
+		}
+
+		/**
 		 * Do the actual search and replace with highlighted custom tags.
 		 */
 		public function do_search_and_replace( $elementor_data, $settings, $is_links, $is_images ) {
@@ -115,20 +129,6 @@ if ( ! class_exists( 'Elementor_Search_Replace' ) ) {
 					),
 				),
 				'search-and-replace'
-			);
-		}
-
-		/**
-		 * Count all occurrences for the search phrase.
-		 */
-		public function count_search_occurrences( $elementor_data, $settings ) {
-			return $this->search_and_replace(
-				$elementor_data,
-				array_merge(
-					$settings,
-					array( 'count' => true ),
-				),
-				'count'
 			);
 		}
 
@@ -173,27 +173,23 @@ if ( ! class_exists( 'Elementor_Search_Replace' ) ) {
 									$iterator_data['id'] = attachment_url_to_postid( $replacement_value );
 								}
 
-								/* TODO: Need to test more and see how to implement.
-								// Add/remove custom highlight class.
-								if ( 'remove-tags' === $action
-									|| strtolower( $value ) === strtolower( $settings['search_phrase'] ) ) {
+								if ( 'remove-tags' === $action || strtolower( $value ) === strtolower( $settings['search_phrase'] ) ) {
 									// Check if Elementor Pro is activated, '_css_classes' no avail in Free.
 									if ( is_plugin_active( 'elementor-pro/elementor-pro.php' ) ) {
 										// Add custom highlight class to the of URLs and Images.
-										$parent_data = $iterator->getSubIterator( $iterator->getDepth() );
+										$sub_iterator = $iterator->getSubIterator( $iterator->getDepth() );
 
-										if ( ! $parent_data->offsetExists( '_css_classes' ) ) {
-											$parent_data->offsetSet( '_css_classes', '' );
+										if ( ! $sub_iterator->offsetExists( '_css_classes' ) ) {
+											$sub_iterator->offsetSet( '_css_classes', '' );
 										}
 
-										$css_classes = $this->update_css_classes( $parent_data->offsetGet( '_css_classes' ), $action );
-										$parent_data->offsetSet( '_css_classes', $css_classes );
+										$css_classes = $this->update_css_classes( $sub_iterator->offsetGet( '_css_classes' ), $action );
+										$sub_iterator->offsetSet( '_css_classes', $css_classes );
 
 										// Recreate the original array structure with highlighter data.
-										$this->merge_into_iterator( $iterator, $parent_data );
+										$this->merge_into_iterator( $iterator, $sub_iterator );
 									}
 								}
-								*/
 
 								// Update replacement value and handle image replacement.
 								if ( attachment_url_to_postid( $replacement_value ) ) {
@@ -225,15 +221,12 @@ if ( ! class_exists( 'Elementor_Search_Replace' ) ) {
 		 * Modify and update CSS classes to highlight Image and URLs containers.
 		 */
 		public function update_css_classes( $css_classes, $action ) {
-			if ( 'remove-tags' === $action ) {
-				$css_classes = preg_replace( '/elsnr-highlight/', '', $css_classes );
-				$css_classes = trim( $css_classes );
-			} else {
-				if ( null !== $css_classes ) {
-					$css_classes .= ' elsnr-highlight';
-				} else {
-					$css_classes = 'elsnr-highlight';
-				}
+			$css_classes = trim( preg_replace( '~elsnr-highlight~m', '', $css_classes ) );
+
+			// In case we have search-replace || remove-tags actions we don't need the
+			// custom class, which is removed with the line above.
+			if ( 'search-replace' !== $action && 'remove-tags' !== $action ) {
+				$css_classes .= ' elsnr-highlight';
 			}
 
 			return $css_classes;
@@ -264,6 +257,25 @@ if ( ! class_exists( 'Elementor_Search_Replace' ) ) {
 
 			// https://developer.wordpress.org/reference/functions/update_post_meta/#workaround
 			update_metadata( 'post', $post_id, '_elementor_data', wp_slash( wp_json_encode( $elementor_data, JSON_UNESCAPED_UNICODE ) ) );
+
+			// Clear Elementor cache
+			\Elementor\Plugin::$instance->files_manager->clear_cache();
+
+			// Update post content to trigger a refresh
+			wp_update_post(
+				array(
+					'ID'                => $post_id,
+					'post_modified'     => current_time( 'mysql' ),
+					'post_modified_gmt' => current_time( 'mysql', 1 ),
+				)
+			);
+
+			// Optionally, trigger content regeneration
+			$elementor = \Elementor\Plugin::$instance;
+			$elementor->frontend->get_builder_content_for_display( $post_id );
+
+			// Optional: Flush object cache if using object caching
+			wp_cache_flush();
 		}
 
 		/**

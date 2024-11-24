@@ -82,15 +82,28 @@ if ( ! class_exists( 'ELEMSNR_Data_Formatter' ) ) {
 					$search_phrase       = html_entity_decode( $this->settings['search_phrase'] );
 					$replace_with_phrase = html_entity_decode( $this->settings['replace_with_phrase'] );
 
-					preg_replace( "~{$search_phrase}~mu", $replace_with_phrase, $current );
+					// Replaces double backslashes (\\) with a single backslash (\)
+					$search_phrase       = str_replace( '\\\\', '\\', $search_phrase );
+					$replace_with_phrase = str_replace( '\\\\', '\\', $replace_with_phrase );
 
-					if ( preg_last_error() !== PREG_NO_ERROR ) {
-						$elemsnr_admin = new ELEMSNR_Admin();
-						$elemsnr_admin->print_json_message( 0, '<strong>Regex Error:</strong> ' . $this->preg_last_error_msg() );
-					}
+					$regex_pattern = "~{$search_phrase}~mu";
 
-					if ( null !== preg_replace( "~{$search_phrase}~mu", $replace_with_phrase, $current ) ) {
-						$current = preg_replace( "~{$search_phrase}~mu", $replace_with_phrase, $current );
+					// Perform the replacement and assign the result back.
+					$new_current = preg_replace( $regex_pattern, $replace_with_phrase, $current );
+
+					if ( null !== $new_current ) {
+						$current = $new_current;
+					} else {
+						// Handle regex errors.
+						if ( preg_last_error() !== PREG_NO_ERROR ) {
+							$elemsnr_admin = new ELEMSNR_Admin();
+							$elemsnr_admin->print_json_message(
+								0,
+								'<strong>Regex Error:</strong> ' . ( function_exists( 'preg_last_error_msg' )
+										? preg_last_error_msg()
+										: $this->preg_last_error_msg() )
+							);
+						}
 					}
 				}
 			} else {
@@ -164,8 +177,15 @@ if ( ! class_exists( 'ELEMSNR_Data_Formatter' ) ) {
 											} else {
 												$replace_with_phrase_regex = '<elsnr-highlight>$0</elsnr-highlight>';
 
+												// If the search is shortcode don't clean/escape it.
+												if ( preg_match_all( '/\[(\w+)(.*?)\]/', $matches[0], $_matches ) ) {
+													$search_phrase = '~' . preg_quote( $matches[0], '~' ) . '~';
+												} else {
+													$search_phrase = '~\b' . $this->preg_clean( $matches[0] ) . '\b~u'; // Add 'u' modifier for UTF-8 support.
+												}
+
 												return preg_replace(
-													'~\b' . $this->preg_clean( $matches[0] ) . '\b~u', // Add 'u' modifier for UTF-8 support.
+													$search_phrase,
 													$replace_with_phrase_regex,
 													$matches[0]
 												);

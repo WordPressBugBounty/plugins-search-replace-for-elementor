@@ -6,7 +6,7 @@ Tags: elementor, replace, elementor pro, search, addon
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 7.2
-Stable tag: 1.4.4
+Stable tag: 1.4.5
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -125,6 +125,13 @@ The installation process for the plugin is standard and user-friendly. Please in
 
 ## CHANGELOG
 
+= 1.4.5 =
+
+- New - Be able to search and replace WordPress shortcodes e.g. `[shortcode attr="value" attr2="value"]`, both RegExp and Text-only mode
+- New - Enable highlighting for links (URLs) and images
+- Update - Style the top bar icon for Editor Top Bar
+- Fix - `update_postmeta` to clear Elementor and WP cache in order to see results on the front end
+
 = 1.4.4 =
 
 - New - Add compact mode toggle under settings option
@@ -136,13 +143,6 @@ The installation process for the plugin is standard and user-friendly. Please in
 
 = 1.4.3 =
 
-- Fix - Mismatched text domain.
-- Fix - Missing `$domain` parameter in function call.
-- Fix - Not unslashed before sanitization. Use `wp_unslash()` or similar.
-- Fix - Detected usage of a non-sanitized input variable.
-- Fix - All output should be run through an escaping function.
-- Fix - Detected usage of a possibly undefined superglobal array index. Use `isset()` or `empty()` to check the index exists before using it.
-- Fix - `strip_tags()` is discouraged. Use the more comprehensive `wp_strip_all_tags()` instead.
 - Update - Replace all php files end of line sequence from `CRLF` to `LF`.
 - Update - Don't show up the rating notice when toggle plugin activate/deactivate. 
 - Update - Replace `MLR_PLUGIN_DOMAIN` with krasenslavov.com in Settings main page.
@@ -151,6 +151,13 @@ The installation process for the plugin is standard and user-friendly. Please in
 - Update - Update the correct support ticket link with `ELEMSNR_PLUGIN_WPORG_SUPPORT`.
 - Update - Regenerate the .pot file.
 - Update - Compatibility check with Elementor 3.25
+- Fix - Mismatched text domain.
+- Fix - Missing `$domain` parameter in function call.
+- Fix - Not unslashed before sanitization. Use `wp_unslash()` or similar.
+- Fix - Detected usage of a non-sanitized input variable.
+- Fix - All output should be run through an escaping function.
+- Fix - Detected usage of a possibly undefined superglobal array index. Use `isset()` or `empty()` to check the index exists before using it.
+- Fix - `strip_tags()` is discouraged. Use the more comprehensive `wp_strip_all_tags()` instead.
 
 = 1.4.2 =
 
