@@ -1,12 +1,12 @@
-### Search & Replace for Elementor
- 
+### Search & Replace: Easily Update Text, Links, and Images in Elementor
+
 Contributors: krasenslavov, developry
 Donate Link: https://krasenslavov.com/hire-krasen/
 Tags: elementor, replace, elementor pro, search, addon 
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 7.2
-Stable tag: 1.4.5
+Stable tag: 1.4.6
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -124,6 +124,10 @@ The installation process for the plugin is standard and user-friendly. Please in
 1. Now you can go to any page/post that uses Elementor and use the plugin as described in the documentation.
 
 ## CHANGELOG
+
+= 1.4.6 =
+
+- Update - Performance and optimization compatibility
 
 = 1.4.5 =
 
