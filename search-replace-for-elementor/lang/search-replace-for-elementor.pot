@@ -1,4 +1,4 @@
-# Search & Replace for Elementor - Easily search and replace any text, links, and images inside the Elementor editor.
+# Search & Replace for Elementor - Quickly search and replace any text, links, or images in Elementor using Search & Replace for Elementor.
 # Copyright (c) 2024 Search & Replace for Elementor
 # This file is distributed under the same license as the plugin, GPLv3 or later.
 # Krasen Slavov <contact@developry.com>, 2024.
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 1.1\n"
 "Report-Msgid-Bugs-To: Search & Replace for Elementor <contact@developry.com>\n"
 "POT-Creation-Date: 2023-03-07 17:19+0200\n"
-"PO-Revision-Date: 2024-11-14 17:19+0200\n"
+"PO-Revision-Date: 2024-12-13 17:19+0200\n"
 "Last-Translator: Krasen Slavov <contact@developry.com>\n"
 "Language-Team: ELEMSNR <contact@developry.com>\n"
 "Language: \n"
@@ -28,55 +28,43 @@ msgid "Search & Replace for Elementor"
 msgstr ""
 
 #: inc/admin/elementor/elementor-actions.php:44
-#: inc/admin/elementor/elementor-actions.php:187
-msgid "Minimum 3 characters for your search value."
+#: inc/admin/elementor/elementor-actions.php:188
+msgid "Enter at least 3 characters for your search value."
 msgstr ""
 
 #: inc/admin/elementor/elementor-actions.php:51
-msgid "You have entered an invalid URL (e.g. https://example.com/)."
+#: inc/admin/elementor/elementor-actions.php:202
+msgid "The URL you entered is invalid (e.g., https://example.com/)."
 msgstr ""
 
-#. translators: %1$s is replaced with search phrase
 #: inc/admin/elementor/elementor-actions.php:80
 #, php-format
 msgid "No results found for %1$s!"
 msgstr ""
 
-#. translators: %1$s is replaced with search occurances
-#. translators: %2$s is replaced with search phrase
 #: inc/admin/elementor/elementor-actions.php:95
 #, php-format
 msgid "%1$s result(s) found for %2$s!"
 msgstr ""
 
 #: inc/admin/elementor/elementor-actions.php:150
-msgid "All custom tags were removed successfully!"
+msgid "All custom tags have been removed successfully!"
 msgstr ""
 
-#: inc/admin/elementor/elementor-actions.php:194
-msgid "Minimum 3 characters for your replace with value."
+#: inc/admin/elementor/elementor-actions.php:195
+msgid "Enter at least 3 characters for your \"replace with\" value."
 msgstr ""
 
-#: inc/admin/elementor/elementor-actions.php:201
-msgid "You have entered an invalid URL(s) (e.g. https://example.com/)."
-msgstr ""
-
-#. translators: %1$s is replaced with search phrase
-#. translators: %2$s is replaced with replace phrase
-#. translators: %3$s is replaced with search occurances
-#. translators: %4$s is replaced with link to undo
-#: inc/admin/elementor/elementor-actions.php:232
+#: inc/admin/elementor/elementor-actions.php:233
 #, php-format
 msgid "%1$s was replaced with %2$s %3$s time(s). %4$s"
 msgstr ""
 
-#: inc/admin/elementor/elementor-actions.php:271
-msgid "Please enter search and replace with field values."
+#: inc/admin/elementor/elementor-actions.php:275
+msgid "Please enter values for both the search and replace fields."
 msgstr ""
 
-#. translators: %1$s is replaced with RegEx/search phrase
-#. translators: %2$s is replaced with HTML/replace phrase
-#: inc/admin/elementor/elementor-actions.php:309
+#: inc/admin/elementor/elementor-actions.php:313
 #, php-format
 msgid "Regex %1$s was used and replaced with %2$s."
 msgstr ""
@@ -90,8 +78,6 @@ msgstr ""
 msgid "Go Pro"
 msgstr ""
 
-#. translators: %1$s is replaced with "Plugin Name"
-#. translators: %2$s is replaced with "Elementor"
 #: inc/admin/requirements/check-elementor.php:26
 #, php-format
 msgid "%1$s requires %2$s to be installed and activated."
@@ -102,35 +88,24 @@ msgstr ""
 msgid "Elementor"
 msgstr ""
 
-#. translators: %1$s is replaced with "Plugin Name"
-#. translators: %2$s is replaced with "Elementor"
-#. translators: %3$s is replaced with "Required Elementor Version"
 #: inc/admin/requirements/check-elementor.php:50
 #, php-format
 msgid "%1$s requires %2$s version %3$s or greater."
 msgstr ""
 
-#. translators: %1$s is replaced with "Plugin Name"
-#. translators: %2$s is replaced with "Min PHP Version"
-#. translators: %3$s is replaced with "Min WP Version"
 #: inc/admin/requirements/check-requirements.php:76
 #, php-format
 msgid "%1$s requires a minimum of PHP %2$s and WordPress %3$s"
 msgstr ""
 
-#. translators: %1$s is replaced with "PHP Version"
-#. translators: %2$s is replaced with "WordPress Version"
 #: inc/admin/requirements/check-requirements.php:85
 #, php-format
 msgid "You are currently running PHP %1$s and WordPress %2$s."
 msgstr ""
 
-#. translators: %1$s is replaced with by giving it 5 stars rating
 #: inc/admin/requirements/notice-rating.php:31
 #, php-format
-msgid ""
-"✨💪🔌 Could you please kindly help the plugin in your turn %1$s? (Thank you in "
-"advance)"
+msgid "✨💪🔌 Could you kindly support the plugin by %1$s? Thank you in advance!"
 msgstr ""
 
 #: inc/admin/requirements/notice-rating.php:34
@@ -155,13 +130,9 @@ msgstr ""
 msgid "Elementor Search and Replace PRO 🚀"
 msgstr ""
 
-#. translators: %1$s is replaced with Found the free version helpful
-#. translators: %2$s is replaced with Elementor Search and Replace Pro
 #: inc/admin/requirements/pro-plugin.php:46
 #, php-format
-msgid ""
-"✨🎉📢 %1$s? Would you be interested in learning more about the benefits of "
-"upgrading to the %2$s?"
+msgid "✨🎉📢 %1$s? Discover the benefits of upgrading to %2$s!"
 msgstr ""
 
 #: inc/admin/requirements/pro-plugin.php:49
@@ -173,10 +144,10 @@ msgid "Elementor Search and Replace Pro"
 msgstr ""
 
 #: inc/admin/settings/compact-mode.php:38
-msgid "Compact mode will add a sub-menu to Elementor."
+msgid "Compact mode moves the plugin access link under Elementor."
 msgstr ""
 
-#: inc/admin/settings/compact-mode.php:63
+#: inc/admin/settings/compact-mode.php:66
 msgid "Compact mode option was updated successfully."
 msgstr ""
 
@@ -186,8 +157,8 @@ msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:24
 msgid ""
-"With the PRO version you will get a lot more features with better "
-"performance and quicker recovery process."
+"The PRO version will unlock more features, better performance, and a faster "
+"search & replace process in bulk."
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:29
@@ -251,7 +222,7 @@ msgid "no"
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:54
-msgid "3rd-party add-ons support"
+msgid "Third-party add-ons support"
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:59
@@ -308,8 +279,12 @@ msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:119
 msgid ""
-"Quickly and easily search and replace any text, links, and images inside the "
-"Elementor editor."
+"Quickly search and replace any text, links, or images in Elementor using "
+"Search & Replace for Elementor."
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:128
+msgid "Need to perform bulk or mass search and replace?"
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:129
@@ -324,12 +299,11 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#. translators: %1$s is replaced with "Link to WP.org support forums"
 #: inc/admin/settings/settings-main-page.php:195
 #, php-format
 msgid ""
-"If something is not clear, please open a ticket on the official plugin %1$s. "
-"All tickets should be addressed within a couple of working days."
+"If something isn't clear, please open a ticket on the official plugin %1$s. "
+"We aim to address all tickets within a few working days."
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:198
@@ -356,13 +330,12 @@ msgstr ""
 msgid "Krasen Slavov @ Developry"
 msgstr ""
 
-#. translators: %1$s is replaced with "Link to Patreon account for support"
 #: inc/admin/settings/settings-main-page.php:230
 #, php-format
 msgid ""
-"* For the price of a cup of coffee per month, you can %1$s in continuing to "
-"develop and maintain all of my free WordPress plugins, every little bit "
-"helps and is greatly appreciated!"
+"* For the price of a cup of coffee per month, you can %1$s to support the "
+"development and maintenance of my free WordPress plugins. Every bit helps "
+"and is greatly appreciated!"
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:233
@@ -381,8 +354,6 @@ msgstr ""
 msgid "Compact Mode"
 msgstr ""
 
-#. translators: %1$s is replaced with Invalid security toke
-#. translators: %2$s is replaced with link to Support email
 #: inc/library/class-elemsnr-admin.php:91
 #, php-format
 msgid "%1$s! Contact us @ %2$s."
@@ -392,72 +363,64 @@ msgstr ""
 msgid "Invalid security token"
 msgstr ""
 
-#. translators: %1$s is replaced with Access denied
 #: inc/library/class-elemsnr-admin.php:124
 #, php-format
 msgid ""
-"%1$s! Current user does not have the capabilities to access this function."
+"%1$s! The current user does not have the necessary capabilities to access "
+"this function."
 msgstr ""
 
 #: inc/library/class-elemsnr-admin.php:125
 msgid "Access denied"
 msgstr ""
 
-#. translators: %1$s is replaced with link to support email
 #: inc/library/class-elemsnr-admin.php:141
 #, php-format
-msgid "Post ID not found! Contact the plugin author @ %1$s."
+msgid "Post ID not found! Please contact the plugin author at %1$s."
 msgstr ""
 
-#. translators: %1$s is replaced with data limit
-#. translators: %2$s is replaced with link to options page
-#: inc/library/class-elemsnr-admin.php:159
+#: inc/library/class-elemsnr-admin.php:158
 #, php-format
 msgid ""
-"Elementor page/post data exceeds the set limit of %1$skb! Update data limit "
-"on the %2$s page to increase the set limit."
+"Elementor page/post data exceeds the limit of %1$skb! You need upgrade to "
+"Pro if you need to do search and replace pages with a lot of content."
 msgstr ""
 
-#: inc/library/class-elemsnr-admin.php:162
-msgid "Options"
-msgstr ""
-
-#. translators: %1$s is replaced with link to support email
-#: inc/library/class-elemsnr-admin.php:179
+#: inc/library/class-elemsnr-admin.php:175
 #, php-format
 msgid ""
-"Elementor data is empty! Add some content to this page or contact us @ %1$s."
+"Elementor data is empty! Add content to this page or contact us at %1$s."
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:241
+#: inc/library/class-elemsnr-data-formatter.php:261
 msgid "No error!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:243
+#: inc/library/class-elemsnr-data-formatter.php:263
 msgid "Internal error!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:245
+#: inc/library/class-elemsnr-data-formatter.php:265
 msgid "Backtrack limit exhausted!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:247
+#: inc/library/class-elemsnr-data-formatter.php:267
 msgid "Recursion limit exhausted!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:249
+#: inc/library/class-elemsnr-data-formatter.php:269
 msgid "Malformed UTF-8 characters, possibly incorrectly encoded!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:251
+#: inc/library/class-elemsnr-data-formatter.php:271
 msgid ""
 "The offset did not correspond to the beginning of a valid UTF-8 code point!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:253
+#: inc/library/class-elemsnr-data-formatter.php:273
 msgid "JIT stack limit exhausted!"
 msgstr ""
 
-#: inc/library/class-elemsnr-data-formatter.php:255
+#: inc/library/class-elemsnr-data-formatter.php:275
 msgid "Unknown error!"
 msgstr ""

@@ -41,9 +41,9 @@ function elemsnr_display_upgrade_notice() {
 				<?php
 				printf(
 					wp_kses(
-						/* translators: %1$s is replaced with Found the free version helpful */
-						/* translators: %2$s is replaced with Elementor Search and Replace Pro */
-						__( '✨🎉📢 %1$s? Would you be interested in learning more about the benefits of upgrading to the %2$s?', 'search-replace-for-elementor' ),
+						/* translators: %1$s is replaced with "Found the free version helpful" */
+						/* translators: %2$s is replaced with "Elementor Search and Replace Pro" */
+						__( '✨🎉📢 %1$s? Discover the benefits of upgrading to %2$s!', 'search-replace-for-elementor' ),
 						json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true )
 					),
 					'<strong>' . esc_html__( 'Found the free version helpful', 'search-replace-for-elementor' ) . '</strong>',
@@ -54,9 +54,9 @@ function elemsnr_display_upgrade_notice() {
 				<?php
 				// printf(
 				// 	wp_kses(
-				// 		/* translators: %1$s is replaced with promo code */
-				// 		/* translators: %2$s is replaced with 10% off */
-				// 		__( 'Use the %1$s code and get %2$s your purchase!', 'search-replace-for-elementor' ),
+				// 		/* translators: %1$s is replaced with "ELEMSNR10" */
+				// 		/* translators: %2$s is replaced with "10% off" */
+				// 		__( 'Use the %1$s promo code and get %2$s your purchase!', 'search-replace-for-elementor' ),
 				// 		json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true )
 				// 	),
 				// 	'<code>' . esc_html__( 'ELEMSNR10', 'search-replace-for-elementor' ) . '</code>',

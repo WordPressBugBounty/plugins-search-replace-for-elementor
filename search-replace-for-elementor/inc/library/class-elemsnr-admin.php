@@ -86,8 +86,8 @@ if ( ! class_exists( 'ELEMSNR_Admin' ) ) {
 		 * error message with a support email link.
 		 */
 		public function get_invalid_nonce_token() {
-			/* translators: %1$s is replaced with Invalid security toke */
-			/* translators: %2$s is replaced with link to Support email */
+			/* translators: %1$s is replaced with "Invalid security token" */
+			/* translators: %2$s is replaced with "contact@domain.com" */
 			$message    = esc_html__( '%1$s! Contact us @ %2$s.', 'search-replace-for-elementor' );
 			$values_arr = array(
 				'<strong>' . esc_html__( 'Invalid security token', 'search-replace-for-elementor' ) . '</strong>',
@@ -120,8 +120,8 @@ if ( ! class_exists( 'ELEMSNR_Admin' ) ) {
 		 * otherwise, print an error message.
 		 */
 		public function get_invalid_user_cap() {
-			/* translators: %1$s is replaced with Access denied */
-			$message    = esc_html__( '%1$s! Current user does not have the capabilities to access this function.', 'search-replace-for-elementor' );
+			/* translators: %1$s is replaced with "Access denied" */
+			$message    = esc_html__( '%1$s! The current user does not have the necessary capabilities to access this function.', 'search-replace-for-elementor' );
 			$values_arr = array( '<strong>' . esc_html__( 'Access denied', 'search-replace-for-elementor' ) . '</strong>' );
 
 			if ( ! $this->check_user_cap() ) {
@@ -138,7 +138,7 @@ if ( ! class_exists( 'ELEMSNR_Admin' ) ) {
 		 */
 		public function get_invalid_post_id( $current_post_id ) {
 			/* translators: %1$s is replaced with link to support email */
-			$message    = esc_html__( 'Post ID not found! Contact the plugin author @ %1$s.', 'search-replace-for-elementor' );
+			$message    = esc_html__( 'Post ID not found! Please contact the plugin author at %1$s.', 'search-replace-for-elementor' );
 			$values_arr = array( '<a href="mailto:contact@' . ELEMSNR_PLUGIN_DOMAIN . '">contact@' . ELEMSNR_PLUGIN_DOMAIN . '</a>' );
 
 			if ( ! $current_post_id ) {
@@ -154,13 +154,9 @@ if ( ! class_exists( 'ELEMSNR_Admin' ) ) {
 		 * Display error if data size limit is exceeded.
 		 */
 		public function get_invalid_data_size_limit( $elementor_data_size ) {
-			/* translators: %1$s is replaced with data limit */
-			/* translators: %2$s is replaced with link to options page */
-			$message    = esc_html__( 'Elementor page/post data exceeds the set limit of %1$skb! Update data limit on the %2$s page to increase the set limit.', 'search-replace-for-elementor' );
-			$values_arr = array(
-				'<em>' . $this->data_size_limit . '</em>',
-				'<a href="' . esc_url( admin_url( 'admin.php?page=' . ELEMSNR_SETTINGS_SLUG ) ) . '">' . esc_html__( 'Options', 'search-replace-for-elementor' ) . '</a>',
-			);
+			/* translators: %1$s is replaced with "data size limit" */
+			$message    = esc_html__( 'Elementor page/post data exceeds the limit of %1$skb! You need upgrade to Pro if you need to do search and replace pages with a lot of content.', 'search-replace-for-elementor' );
+			$values_arr = array( '<em>' . $this->data_size_limit . '</em>' );
 
 			if ( $elementor_data_size > $this->data_size_limit ) {
 				$this->print_json_message(
@@ -175,8 +171,8 @@ if ( ! class_exists( 'ELEMSNR_Admin' ) ) {
 		 * Display error if elementor data is empty.
 		 */
 		public function get_invalid_elementor_data( $elementor_data ) {
-			/* translators: %1$s is replaced with link to support email */
-			$message    = esc_html__( 'Elementor data is empty! Add some content to this page or contact us @ %1$s.', 'search-replace-for-elementor' );
+			/* translators: %1$s is replaced with "contact@domain.com" */
+			$message    = esc_html__( 'Elementor data is empty! Add content to this page or contact us at %1$s.', 'search-replace-for-elementor' );
 			$values_arr = array( '<a href="mailto:contact@' . ELEMSNR_PLUGIN_DOMAIN . '">contact@' . ELEMSNR_PLUGIN_DOMAIN . '</a>' );
 
 			if ( empty( $elementor_data ) ) {

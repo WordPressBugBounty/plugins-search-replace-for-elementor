@@ -21,7 +21,7 @@ namespace DEVRY\ELEMSNR;
 			</h4>
 
 			<p>
-				<?php echo esc_html__( 'With the PRO version you will get a lot more features with better performance and quicker recovery process.', 'search-replace-for-elementor' ); ?>
+				<?php echo esc_html__( 'The PRO version will unlock more features, better performance, and a faster search & replace process in bulk.', 'search-replace-for-elementor' ); ?>
 			</p>
 
 			<table>
@@ -51,7 +51,7 @@ namespace DEVRY\ELEMSNR;
 					<td><?php echo esc_html__( 'yes', 'search-replace-for-elementor' ); ?></td>
 				</tr>
 				<tr>
-					<td><?php echo esc_html__( '3rd-party add-ons support', 'search-replace-for-elementor' ); ?></td>
+					<td><?php echo esc_html__( 'Third-party add-ons support', 'search-replace-for-elementor' ); ?></td>
 					<td><?php echo esc_html__( 'no', 'search-replace-for-elementor' ); ?></td>
 					<td><?php echo esc_html__( 'yes', 'search-replace-for-elementor' ); ?></td>
 				</tr>
@@ -116,16 +116,16 @@ namespace DEVRY\ELEMSNR;
 			</h2>
 
 			<p>
-				<?php esc_html_e( 'Quickly and easily search and replace any text, links, and images inside the Elementor editor.', 'search-replace-for-elementor' ); ?>
+				<?php esc_html_e( 'Quickly search and replace any text, links, or images in Elementor using Search & Replace for Elementor.', 'search-replace-for-elementor' ); ?>
 			</p>
 
 			<p>
 				<?php
 				printf(
-					/* translators: %1$s is replaced with "Need to do bulk search and replace?" */
+					/* translators: %1$s is replaced with "Need to perform bulk or mass search and replace?" */
 					/* translators: %2$s is replaced with "Get the PRO version now" */
 					wp_kses( '%1$s %2$s!', 'search-replace-for-elementor', json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true ) ),
-					'<em>Need to do bulk or mass search and replace?</em>',
+					'<em>' . esc_html__( 'Need to perform bulk or mass search and replace?', 'search-replace-for-elementor' ) . '</em>',
 					'<a href="https://bit.ly/3vhfGaI" target="_blank"><strong>' . esc_html__( 'Get the PRO version now', 'search-replace-for-elementor' ) . '</strong></a>'
 				);
 				?>
@@ -146,7 +146,7 @@ namespace DEVRY\ELEMSNR;
 				<?php
 				printf(
 					/* translators: %1$s is replaced with "Note" */
-					wp_kses( '%1$s: Bulk search and replace with Links (URLs), Images, and Case-sensitivity filters, as well as Backups and Custom Options are available only in the PRO version!', 'search-replace-for-elementor', json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true ) ),
+					wp_kses( '%1$s: Bulk search and replace for links (URLs), images, case-sensitive filters, backups, and custom options are available only in the PRO version!', 'search-replace-for-elementor', json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true ) ),
 					'<strong>' . esc_html__( 'Note', 'search-replace-for-elementor' ) . '</strong>'
 				);
 				?>
@@ -191,8 +191,8 @@ namespace DEVRY\ELEMSNR;
 					<?php
 					printf(
 						wp_kses(
-							/* translators: %1$s is replaced with "Link to WP.org support forums" */
-							__( 'If something is not clear, please open a ticket on the official plugin %1$s. All tickets should be addressed within a couple of working days.', 'search-replace-for-elementor' ),
+							/* translators: %1$s is replaced with "Support Forum" */
+							__( 'If something isn\'t clear, please open a ticket on the official plugin %1$s. We aim to address all tickets within a few working days.', 'search-replace-for-elementor' ),
 							json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true )
 						),
 						'<a href="' . esc_url( ELEMSNR_PLUGIN_WPORG_SUPPORT ) . '" target="_blank">' . esc_html__( 'Support Forum', 'search-replace-for-elementor' ) . '</a>'
@@ -226,8 +226,8 @@ namespace DEVRY\ELEMSNR;
 					<?php
 					printf(
 						wp_kses(
-							/* translators: %1$s is replaced with "Link to Patreon account for support" */
-							__( '* For the price of a cup of coffee per month, you can %1$s in continuing to develop and maintain all of my free WordPress plugins, every little bit helps and is greatly appreciated!', 'search-replace-for-elementor' ),
+							/* translators: %1$s is replaced with "help and support me on Patreon" */
+							__( '* For the price of a cup of coffee per month, you can %1$s to support the development and maintenance of my free WordPress plugins. Every bit helps and is greatly appreciated!', 'search-replace-for-elementor' ),
 							json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true )
 						),
 						'<a href="https://patreon.com/krasenslavov" target="_blank">' . esc_html__( 'help and support me on Patreon', 'search-replace-for-elementor' ) . '</a>'

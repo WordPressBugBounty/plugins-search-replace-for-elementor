@@ -27,8 +27,8 @@ function elemsnr_display_rating_notice() {
 					<?php
 					printf(
 						wp_kses(
-							/* translators: %1$s is replaced with by giving it 5 stars rating */
-							__( '✨💪🔌 Could you please kindly help the plugin in your turn %1$s? (Thank you in advance)', 'search-replace-for-elementor' ),
+							/* translators: %1$s is replaced with "by giving it 5 stars rating" */
+							__( '✨💪🔌 Could you kindly support the plugin by %1$s? Thank you in advance!', 'search-replace-for-elementor' ),
 							json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true )
 						),
 						'<strong>' . esc_html__( 'by giving it 5 stars rating', 'search-replace-for-elementor' ) . '</strong>'

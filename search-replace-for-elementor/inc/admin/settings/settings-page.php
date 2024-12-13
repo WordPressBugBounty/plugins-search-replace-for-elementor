@@ -28,7 +28,7 @@ function elemsnr_display_settings_page() {
 	);
 
 	add_settings_field(
-		'elemsnr_disable_compact_mode',
+		'elemsnr_compact_mode',
 		'<label for="elemsnr-compact-mode">'
 			. __( 'Compact Mode', 'search-replace-for-elementor' )
 			. '</label>',

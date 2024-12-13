@@ -35,7 +35,7 @@ function elemsnr_display_compact_mode() {
 	?>
 		<p class="description">
 			<small>
-				<?php echo esc_html__( 'Compact mode will add a sub-menu to Elementor.', 'search-replace-for-elementor' ); ?>
+				<?php echo esc_html__( 'Compact mode moves the plugin access link under Elementor.', 'search-replace-for-elementor' ); ?>
 			</small>
 		</p>
 	<?php

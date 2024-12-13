@@ -41,14 +41,14 @@ function elemsnr_highlight_search() {
 	if ( strlen( $search_phrase ) < 3 ) {
 		$elemsnr_admin->print_json_message(
 			0,
-			__( 'Minimum 3 characters for your search value.', 'search-replace-for-elementor' )
+			__( 'Enter at least 3 characters for your search value.', 'search-replace-for-elementor' )
 		);
 	}
 
 	if ( $is_links && ! filter_var( $search_phrase, FILTER_VALIDATE_URL ) ) {
 		$elemsnr_admin->print_json_message(
 			0,
-			__( 'You have entered an invalid URL (e.g. https://example.com/).', 'search-replace-for-elementor' )
+			__( 'The URL you entered is invalid (e.g., https://example.com/).', 'search-replace-for-elementor' )
 		);
 	}
 
@@ -76,7 +76,7 @@ function elemsnr_highlight_search() {
 
 		$elemsnr_admin->print_json_message(
 			0,
-			/* translators: %1$s is replaced with search phrase */
+			/* translators: %1$s is replaced with "search phrase" */
 			__( 'No results found for %1$s!', 'search-replace-for-elementor' ),
 			array( '<strong>' . $search_phrase . '</strong>' ),
 			$elemsnr->runtime
@@ -90,8 +90,8 @@ function elemsnr_highlight_search() {
 
 	$elemsnr_admin->print_json_message(
 		1,
-		/* translators: %1$s is replaced with search occurances */
-		/* translators: %2$s is replaced with search phrase */
+		/* translators: %1$s is replaced with "search_occurrences" */
+		/* translators: %2$s is replaced with "search phrase" */
 		__( '%1$s result(s) found for %2$s!', 'search-replace-for-elementor' ),
 		array(
 			'<strong>' . $search_occurrences . '</strong>',
@@ -147,7 +147,7 @@ function elemsnr_unhighlight_search() {
 
 	$elemsnr_admin->print_json_message(
 		1,
-		__( 'All custom tags were removed successfully!', 'search-replace-for-elementor' ),
+		__( 'All custom tags have been removed successfully!', 'search-replace-for-elementor' ),
 		array(),
 		$elemsnr->runtime
 	);
@@ -185,21 +185,21 @@ function elemsnr_replace_search() {
 	if ( strlen( $search_phrase ) < 3 ) {
 		$elemsnr_admin->print_json_message(
 			0,
-			__( 'Minimum 3 characters for your search value.', 'search-replace-for-elementor' )
+			__( 'Enter at least 3 characters for your search value.', 'search-replace-for-elementor' )
 		);
 	}
 
 	if ( strlen( $replace_with_phrase ) < 3 ) {
 		$elemsnr_admin->print_json_message(
 			0,
-			__( 'Minimum 3 characters for your replace with value.', 'search-replace-for-elementor' )
+			__( 'Enter at least 3 characters for your "replace with" value.', 'search-replace-for-elementor' )
 		);
 	}
 
 	if ( $is_links && ( ! filter_var( $search_phrase, FILTER_VALIDATE_URL ) || ! filter_var( $replace_with_phrase, FILTER_VALIDATE_URL ) ) ) {
 		$elemsnr_admin->print_json_message(
 			0,
-			__( 'You have entered an invalid URL(s) (e.g. https://example.com/).', 'search-replace-for-elementor' )
+			__( 'The URL you entered is invalid (e.g., https://example.com/).', 'search-replace-for-elementor' )
 		);
 	}
 
@@ -226,10 +226,10 @@ function elemsnr_replace_search() {
 
 	$elemsnr_admin->print_json_message(
 		1,
-		/* translators: %1$s is replaced with search phrase */
-		/* translators: %2$s is replaced with replace phrase */
-		/* translators: %3$s is replaced with search occurances */
-		/* translators: %4$s is replaced with link to undo */
+		/* translators: %1$s is replaced with "search phrase" */
+		/* translators: %2$s is replaced with "replace phrase" */
+		/* translators: %3$s is replaced with "search_occurrences" */
+		/* translators: %4$s is replaced with "Undo" */
 		__( '%1$s was replaced with %2$s %3$s time(s). %4$s', 'search-replace-for-elementor' ),
 		array(
 			"<strong id=\"elemsnr-undo-search-phrase\">{$search_phrase}</strong>",
@@ -272,7 +272,7 @@ function elemsnr_replace_html_regex() {
 	if ( strlen( $search_phrase ) < 3 || strlen( $replace_with_phrase ) < 3 ) {
 		$elemsnr_admin->print_json_message(
 			0,
-			__( 'Please enter search and replace with field values.', 'search-replace-for-elementor' )
+			__( 'Please enter values for both the search and replace fields.', 'search-replace-for-elementor' )
 		);
 	}
 
@@ -308,8 +308,8 @@ function elemsnr_replace_html_regex() {
 
 	$elemsnr_admin->print_json_message(
 		1,
-		/* translators: %1$s is replaced with RegEx/search phrase */
-		/* translators: %2$s is replaced with HTML/replace phrase */
+		/* translators: %1$s is replaced with "search phrase" */
+		/* translators: %2$s is replaced with "replace phrase" */
 		__( 'Regex %1$s was used and replaced with %2$s.', 'search-replace-for-elementor' ),
 		array(
 			"<strong id=\"elemsnr-undo-search-phrase\">{$search_phrase}</strong>",
