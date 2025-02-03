@@ -1,4 +1,6 @@
-### Search & Replace for Elementor - Text, Links, and Images
+<!-- @format -->
+
+### Search & Replace for Elementor - Text, Links & Images
 
 Contributors: krasenslavov, developry
 Donate Link: https://krasenslavov.com/hire-krasen/

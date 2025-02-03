@@ -19,7 +19,10 @@ namespace DEVRY\ELEMSNR;
 function elemsnr_display_rating_notice() {
 	$elemsnr_admin = new ELEMSNR_Admin();
 
-	if ( ! get_option( 'elemsnr_rating_notice', '' ) ) {
+	$screen = get_current_screen();
+
+	if ( ! get_option( 'elemsnr_rating_notice', '' )
+		&& strpos( $screen->id, 'elemsnr_' ) ) {
 		?>
 			<div class="notice notice-info is-dismissible elemsnr-admin">
 				<h3><?php echo esc_html( ELEMSNR_PLUGIN_NAME ); ?></h3>

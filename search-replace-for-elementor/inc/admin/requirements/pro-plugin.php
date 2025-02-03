@@ -36,6 +36,20 @@ function elemsnr_display_upgrade_notice() {
 	}
 	?>
 		<div class="notice notice-success is-dismissible elemsnr-admin">
+			<p class="elemsnr-upgrade-notice-discount">
+				<?php
+				// printf(
+				// 	wp_kses(
+				// 		/* translators: %1$s is replaced with "ELEMSNR10" */
+				// 		/* translators: %2$s is replaced with "10% off" */
+				// 		__( 'Use the %1$s promo code and get %2$s your purchase!', 'search-replace-for-elementor' ),
+				// 		json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true )
+				// 	),
+				// 	'<code>' . esc_html__( 'ELEMSNR10', 'search-replace-for-elementor' ) . '</code>',
+				// 	'<strong>' . esc_html__( '10% off', 'search-replace-for-elementor' ) . '</strong>'
+				// );
+				?>
+			</p>
 			<h3><?php echo esc_html__( 'Elementor Search and Replace PRO 🚀', 'search-replace-for-elementor' ); ?></h3>
 			<p>
 				<?php
@@ -49,19 +63,6 @@ function elemsnr_display_upgrade_notice() {
 					'<strong>' . esc_html__( 'Found the free version helpful', 'search-replace-for-elementor' ) . '</strong>',
 					'<strong>' . esc_html__( 'Elementor Search and Replace Pro', 'search-replace-for-elementor' ) . '</strong>'
 				);
-				?>
-				<!-- <br /> -->
-				<?php
-				// printf(
-				// 	wp_kses(
-				// 		/* translators: %1$s is replaced with "ELEMSNR10" */
-				// 		/* translators: %2$s is replaced with "10% off" */
-				// 		__( 'Use the %1$s promo code and get %2$s your purchase!', 'search-replace-for-elementor' ),
-				// 		json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true )
-				// 	),
-				// 	'<code>' . esc_html__( 'ELEMSNR10', 'search-replace-for-elementor' ) . '</code>',
-				// 	'<strong>' . esc_html__( '10% off', 'search-replace-for-elementor' ) . '</strong>'
-				// );
 				?>
 			</p>
 			<div class="button-group">
