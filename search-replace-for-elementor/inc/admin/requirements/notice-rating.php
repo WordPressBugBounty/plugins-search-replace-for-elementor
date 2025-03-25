@@ -3,7 +3,7 @@
  * [Short description]
  *
  * @package    DEVRY\ELEMSNR
- * @copyright  Copyright (c) 2024, Developry Ltd.
+ * @copyright  Copyright (c) 2025, Developry Ltd.
  * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.3
  */
@@ -19,10 +19,9 @@ namespace DEVRY\ELEMSNR;
 function elemsnr_display_rating_notice() {
 	$elemsnr_admin = new ELEMSNR_Admin();
 
-	$screen = get_current_screen();
+	$current_screen = get_current_screen();
 
-	if ( ! get_option( 'elemsnr_rating_notice', '' )
-		&& strpos( $screen->id, 'elemsnr_' ) ) {
+	if ( ! get_option( 'elemsnr_rating_notice', '' ) && strpos( $current_screen->id, 'elemsnr_' ) ) {
 		?>
 			<div class="notice notice-info is-dismissible elemsnr-admin">
 				<h3><?php echo esc_html( ELEMSNR_PLUGIN_NAME ); ?></h3>

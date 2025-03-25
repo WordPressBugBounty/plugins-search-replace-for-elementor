@@ -1,7 +1,7 @@
 # Search & Replace for Elementor - Quickly search and replace any text, links, or images in Elementor using Search & Replace for Elementor.
-# Copyright (c) 2024 Search & Replace for Elementor
+# Copyright (c) 2025 Developry
 # This file is distributed under the same license as the plugin, GPLv3 or later.
-# Krasen Slavov <contact@developry.com>, 2024.
+# Krasen Slavov <contact@developry.com>, 2025.
 #, fuzzy
 msgid ""
 msgstr ""

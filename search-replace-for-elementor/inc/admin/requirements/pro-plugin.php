@@ -3,7 +3,7 @@
  * [Short description]
  *
  * @package    DEVRY\ELEMSNR
- * @copyright  Copyright (c) 2024, Developry Ltd.
+ * @copyright  Copyright (c) 2025, Developry Ltd.
  * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.3
  */
@@ -30,13 +30,12 @@ register_activation_hook( ELEMSNR_PLUGIN_BASENAME, __NAMESPACE__ . '\elemsnr_che
 function elemsnr_display_upgrade_notice() {
 	$elemsnr_admin = new ELEMSNR_Admin();
 
-	if ( get_option( 'elemsnr_upgrade_notice' )
-		&& get_transient( 'elemsnr_upgrade_plugin' ) ) {
+	if ( get_option( 'elemsnr_upgrade_notice' ) && get_transient( 'elemsnr_upgrade_plugin' ) ) {
 		return;
 	}
 	?>
 		<div class="notice notice-success is-dismissible elemsnr-admin">
-			<p class="elemsnr-upgrade-notice-discount">
+			<!-- <p class="elemsnr-upgrade-notice-discount"> -->
 				<?php
 				// printf(
 				// 	wp_kses(
@@ -49,8 +48,10 @@ function elemsnr_display_upgrade_notice() {
 				// 	'<strong>' . esc_html__( '10% off', 'search-replace-for-elementor' ) . '</strong>'
 				// );
 				?>
-			</p>
-			<h3><?php echo esc_html__( 'Elementor Search and Replace PRO 🚀', 'search-replace-for-elementor' ); ?></h3>
+			<!-- </p> -->
+			<h3>
+				<?php echo esc_html__( 'Elementor Search and Replace PRO 🚀', 'search-replace-for-elementor' ); ?>
+			</h3>
 			<p>
 				<?php
 				printf(

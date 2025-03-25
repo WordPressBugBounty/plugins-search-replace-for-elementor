@@ -3,7 +3,7 @@
  * [Short description]
  *
  * @package    DEVRY\ELEMSNR
- * @copyright  Copyright (c) 2024, Developry Ltd.
+ * @copyright  Copyright (c) 2025, Developry Ltd.
  * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.3
  */
@@ -20,11 +20,10 @@ function elemsnr_enqueue_admin_assets() {
 		return;
 	}
 
+	// $elemsnr = new Elementor_Search_Replace();
 	// Load assets only for page page staring with prefix elemsnr-.
-	// $screen = get_current_screen();
-	// if ( strpos( $screen->id, 'elemsnr_' ) ) {}
-
-	$elemsnr = new Elementor_Search_Replace();
+	// $current_screen = get_current_screen();
+	// if ( strpos( $current_screen->id, 'elemsnr_' ) ) {}
 
 	wp_enqueue_style(
 		'elemsnr-admin',

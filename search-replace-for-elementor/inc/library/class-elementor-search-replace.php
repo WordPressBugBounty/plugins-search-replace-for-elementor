@@ -3,7 +3,7 @@
  * Elementor search and replace.
  *
  * @package    DEVRY\ELEMSNR
- * @copyright  Copyright (c) 2024, Developry Ltd.
+ * @copyright  Copyright (c) 2025, Developry Ltd.
  * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.0
  */

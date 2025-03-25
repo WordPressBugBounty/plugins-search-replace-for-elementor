@@ -3,7 +3,7 @@
  * [Short Description]
  *
  * @package    DEVRY\ELEMSNR
- * @copyright  Copyright (c) 2024, Developry Ltd.
+ * @copyright  Copyright (c) 2025, Developry Ltd.
  * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.3
  */
@@ -19,11 +19,9 @@ namespace DEVRY\ELEMSNR;
 			<h4>
 				<?php echo esc_html__( 'Get the PRO version today!', 'search-replace-for-elementor' ); ?>
 			</h4>
-
 			<p>
 				<?php echo esc_html__( 'The PRO version will unlock more features, better performance, and a faster search & replace process in bulk.', 'search-replace-for-elementor' ); ?>
 			</p>
-
 			<table>
 				<tr>
 					<th><?php echo esc_html__( 'Feature', 'search-replace-for-elementor' ); ?></th>
@@ -91,7 +89,6 @@ namespace DEVRY\ELEMSNR;
 					<td><?php echo esc_html__( 'priority', 'search-replace-for-elementor' ); ?></td>
 				</tr>
 			</table>
-
 			<p class="button-group">
 				<a
 					class="button button-primary button-pro"
@@ -109,16 +106,13 @@ namespace DEVRY\ELEMSNR;
 				</a>
 			</p>
 		</div>
-
 		<div>
 			<h2>
 				<?php esc_html_e( 'Search & Replace for Elementor', 'search-replace-for-elementor' ); ?>
 			</h2>
-
 			<p>
 				<?php esc_html_e( 'Quickly search and replace any text, links, or images in Elementor using Search & Replace for Elementor.', 'search-replace-for-elementor' ); ?>
 			</p>
-
 			<p>
 				<?php
 				printf(
@@ -130,7 +124,6 @@ namespace DEVRY\ELEMSNR;
 				);
 				?>
 			</p>
-
 			<p>
 				<iframe 
 					height="540" 
@@ -141,7 +134,6 @@ namespace DEVRY\ELEMSNR;
 					allowfullscreen>
 				</iframe>
 			</p>
-
 			<p>
 				<?php
 				printf(
@@ -151,7 +143,6 @@ namespace DEVRY\ELEMSNR;
 				);
 				?>
 			</p>
-
 			<div class="feature-screenshots">
 				<div>
 					<img src="<?php echo esc_url( ELEMSNR_PLUGIN_IMG_URL ); ?>feature-highlight.png" alt="Highlight feature" />
@@ -160,9 +151,7 @@ namespace DEVRY\ELEMSNR;
 					<img src="<?php echo esc_url( ELEMSNR_PLUGIN_IMG_URL ); ?>feature-native.png" alt="Native search and replace feature" />
 				</div>
 			</div>
-
 			<hr />
-
 			<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
 				<?php settings_errors( 'elemsnr_settings_errors' ); ?>
 				<?php wp_nonce_field( 'elemsnr_settings_nonce', 'elemsnr_wpnonce' ); ?>
@@ -181,11 +170,8 @@ namespace DEVRY\ELEMSNR;
 					</button>
 				</p>
 			</form>
-
 			<br clear="all" />
-
 			<hr />
-
 			<div class="elemsnr-support-credits">
 				<p>
 					<?php
@@ -218,9 +204,7 @@ namespace DEVRY\ELEMSNR;
 					</a>
 				</p>
 			</div>
-
 			<hr />
-
 			<p>
 				<small>
 					<?php
