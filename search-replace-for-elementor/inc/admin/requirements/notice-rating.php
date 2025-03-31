@@ -53,3 +53,5 @@ function elemsnr_display_rating_notice() {
 		<?php
 	}
 }
+
+add_action( 'admin_notices', __NAMESPACE__ . '\elemsnr_display_rating_notice' );

@@ -85,3 +85,5 @@ function elemsnr_display_upgrade_notice() {
 	// Set the transient to last for 30 days.
 	set_transient( 'elemsnr_upgrade_plugin', true, 30 * DAY_IN_SECONDS );
 }
+
+add_action( 'admin_notices', __NAMESPACE__ . '\elemsnr_display_upgrade_notice' );

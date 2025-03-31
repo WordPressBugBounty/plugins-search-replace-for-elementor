@@ -58,16 +58,6 @@ function elemsnr_check_requirements() {
 			'admin_enqueue_scripts',
 			__NAMESPACE__ . '\elemsnr_enqueue_admin_assets'
 		);
-
-		add_action(
-			'admin_notices',
-			__NAMESPACE__ . '\elemsnr_display_rating_notice'
-		);
-
-		add_action(
-			'admin_notices',
-			__NAMESPACE__ . '\elemsnr_display_upgrade_notice'
-		);
 	} else {
 		$message = sprintf(
 			/* translators: %1$s is replaced with "Plugin Name" */

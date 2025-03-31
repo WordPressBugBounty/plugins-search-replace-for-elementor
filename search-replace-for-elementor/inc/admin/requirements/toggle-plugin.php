@@ -17,8 +17,6 @@ namespace DEVRY\ELEMSNR;
  */
 function elemsnr_activate_plugin( $plugin_file_path ) {
 	if ( ELEMSNR_PLUGIN_BASENAME === $plugin_file_path ) {
-		if ( get_option( 'elemsnr_rating_notice', '' ) ) {
-		}
 	}
 }
 
@@ -29,7 +27,7 @@ add_action( 'activated_plugin', __NAMESPACE__ . '\elemsnr_activate_plugin' );
  */
 function elemsnr_deactivate_plugin( $plugin_file_path ) {
 	if ( ELEMSNR_PLUGIN_BASENAME === $plugin_file_path ) {
-		// delete_option( 'elemsnr_rating_notice' );
+		delete_option( 'elemsnr_rating_notice' );
 		delete_option( 'elemsnr_upgrade_notice' );
 	}
 }

@@ -6,7 +6,7 @@ Tags: elementor, replace, elementor pro, search, addon
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 7.2
-Stable tag: 1.4.9
+Stable tag: 1.5.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -127,10 +127,18 @@ _Make sure Elementor Free or Pro is activated beforehand._
 
 ## CHANGELOG
 
+= 1.5.0 =
+
+- Update - Performance and optimization compatibility
+- Update - Improve overall code quality
+- Fix - Minor JS and CSS fixes
+
 = 1.4.9 =
 
 - Update - Performance and optimization compatibility
 - Update - Elementor tested up to: 3.28
+- Update - Change year from 2024 -> 2025 all over
+- Fix - Minor JS and CSS fixes
 
 = 1.4.8 =
 

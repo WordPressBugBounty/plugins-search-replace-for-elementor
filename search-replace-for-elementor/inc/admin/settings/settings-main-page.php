@@ -153,6 +153,7 @@ namespace DEVRY\ELEMSNR;
 			</div>
 			<hr />
 			<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
+				<div id="elemsnr-output" class="notice is-dismissible elemsnr-output"></div>
 				<?php settings_errors( 'elemsnr_settings_errors' ); ?>
 				<?php wp_nonce_field( 'elemsnr_settings_nonce', 'elemsnr_wpnonce' ); ?>
 				<?php
