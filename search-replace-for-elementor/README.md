@@ -8,7 +8,7 @@ Tags: elementor, replace, elementor pro, search, addon
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -128,6 +128,11 @@ _Make sure Elementor Free or Pro is activated beforehand._
 1. You can now go to any page or post using Elementor and use the plugin as outlined in the documentation.
 
 ## CHANGELOG
+
+= 1.5.2 =
+
+- Update - Tested and confirmed compatibility with the latest PHP and WordPress
+- Update - Improved compatiblity with Elementor 3.30
 
 = 1.5.1 =
 
