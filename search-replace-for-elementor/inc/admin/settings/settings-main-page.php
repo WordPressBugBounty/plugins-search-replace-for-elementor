@@ -92,7 +92,7 @@ namespace DEVRY\ELEMSNR;
 			<p class="button-group">
 				<a
 					class="button button-primary button-pro"
-					href="https://bit.ly/3vhfGaI"
+					href="https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=pro_table_button"
 					target="_blank"
 				>
 					<?php echo esc_html__( 'GET PRO VERSION', 'search-replace-for-elementor' ); ?>
@@ -120,7 +120,7 @@ namespace DEVRY\ELEMSNR;
 					/* translators: %2$s is replaced with "Get the PRO version now" */
 					wp_kses( '%1$s %2$s!', 'search-replace-for-elementor', json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true ) ),
 					'<em>' . esc_html__( 'Need to perform bulk or mass search and replace?', 'search-replace-for-elementor' ) . '</em>',
-					'<a href="https://bit.ly/3vhfGaI" target="_blank"><strong>' . esc_html__( 'Get the PRO version now', 'search-replace-for-elementor' ) . '</strong></a>'
+					'<a href="https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=pro_table_button" target="_blank"><strong>' . esc_html__( 'Get the PRO version now', 'search-replace-for-elementor' ) . '</strong></a>'
 				);
 				?>
 			</p>

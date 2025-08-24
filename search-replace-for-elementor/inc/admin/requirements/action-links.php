@@ -24,7 +24,7 @@ function elemsnr_add_action_links( $links, $file_path ) {
 			. esc_html__( 'Settings', 'search-replace-for-elementor' )
 			. '</a>';
 
-		$links['elemsnr-upgrade'] = '<a href="https://bit.ly/3TBL90A" target="_blank">'
+		$links['elemsnr-upgrade'] = '<a href="https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=go_pro_link" target="_blank">'
 		. esc_html__( 'Go Pro', 'search-replace-for-elementor' )
 		. '</a>';
 

@@ -6,7 +6,7 @@ Tags: elementor, replace, elementor pro, search, addon
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 1.5.3
+Stable tag: 1.5.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,13 +14,13 @@ Quickly search and replace any text, links, or images in Elementor using Search 
 
 ## DESCRIPTION
 
-Quickly search and replace any text, links, or images in Elementor using [**Search & Replace for Elementor**](https://bit.ly/43jOSU8).
+Quickly search and replace any text, links, or images in Elementor using [**Search & Replace for Elementor**](https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=readme_md).
 
 https://www.youtube.com/embed/FoWqNtUVklY
 
 Elementor, one of the most popular visual editors, lacks a built-in search and replace feature.
 
-With [**Search & Replace for Elementor**](https://bit.ly/43jOSU8), you can easily replace text, links, and images—no extra software needed!
+With [**Search & Replace for Elementor**](https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=readme_md), you can easily replace text, links, and images—no extra software needed!
 
 ## USAGE
 
@@ -28,7 +28,7 @@ Once you upload and activate the plugin:
 
 1. Open any Elementor-created page and navigate to `Menu > Search & Replace` to access the plugin modal.
 2. Use the options to highlight or perform case-sensitive search and replace.
-3. Add special tags to highlight text using [**Search & Replace for Elementor**](https://bit.ly/43jOSU8). Use the `Clear` button to clean your code if needed.
+3. Add special tags to highlight text using [**Search & Replace for Elementor**](https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=readme_md). Use the `Clear` button to clean your code if needed.
 
 Here are the general steps to use the plugin:
 
@@ -44,7 +44,7 @@ _NOTE: To maintain optimal plugin performance, a raw data limit of 300kb has bee
 
 ## FEATURES & LIMITATIONS
 
-[**Search & Replace for Elementor**](https://bit.ly/43jOSU8) is/does:
+[**Search & Replace for Elementor**](https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=readme_md) is/does:
 
 - A plugin for Elementor that lets you quickly search and replace text, links, or images in your posts and pages.
 - Boosts your efficiency in Elementor by enabling faster editing, either page-by-page or in bulk.
@@ -60,7 +60,7 @@ Find step-by-step setup guides, usage instructions, demos, videos, and insights 
 
 ## SEARCH AND REPLACE FOR ELEMENTOR PRO
 
-If you're using the free version from WordPress.org and want Pro features, you can purchase the premium version on the [**Search & Replace for Elementor Pro**](https://bit.ly/43jOSU8) website.
+If you're using the free version from WordPress.org and want Pro features, you can purchase the premium version on the [**Search & Replace for Elementor Pro**](https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=readme_md) website.
 
 Here are some features included in the Pro version:
 
@@ -91,7 +91,7 @@ For Classic and Gutenberg editors, try our open-source [**Block Editor Search & 
 
 ### Do You Offer Additional Support or Customization?
 
-Yes, contact us by submitting your request on the [**Search & Replace for Elementor Pro**](https://bit.ly/43jOSU8) website.
+Yes, contact us by submitting your request on the [**Search & Replace for Elementor Pro**](https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=readme_md) website.
 
 ## SCREENSHOTS
 
@@ -127,9 +127,13 @@ _Make sure Elementor Free or Pro is activated beforehand._
 
 ## CHANGELOG
 
+= 1.5.4 =
+
+- Update - Remove the bitly.com links with raw and direct links with analytics params
+
 = 1.5.3 =
 
-- Fix - Notice `Translation loading for the wp-media-recovery domain was triggered too early`
+- Fix - Notice translation loading for the `search-replace-for-elementor` domain was triggered too early
 - Update - Improved compatiblity with Elementor 3.31
 
 = 1.5.2 =
@@ -174,8 +178,8 @@ _Make sure Elementor Free or Pro is activated beforehand._
 - Update - Style the top bar icon for Editor Top Bar
 - Fix - `update_postmeta` to clear Elementor and WP cache in order to see results on the front end
 
-**Check out the complete changelog on our [**Search & Replace for Elementor**](https://bit.ly/43jOSU8) website.**
+**Check out the complete changelog on our [**Search & Replace for Elementor**](https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=readme_md) website.**
 
 ## UPGRADE NOTICE
 
-Upgrade to [**Search & Replace for Elementor Pro**](https://bit.ly/43jOSU8) for advanced features, bulk search and replace, and priority support!
+Upgrade to [**Search & Replace for Elementor Pro**](https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=readme_md) for advanced features, bulk search and replace, and priority support!

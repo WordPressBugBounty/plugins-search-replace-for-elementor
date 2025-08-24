@@ -67,7 +67,7 @@ function elemsnr_display_upgrade_notice() {
 				?>
 			</p>
 			<div class="button-group">
-				<a href="https://bit.ly/43dazVP" target="_blank" class="button button-primary button-success">
+				<a href="https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=admin_notice_button" target="_blank" class="button button-primary button-success">
 					<?php echo esc_html__( 'Go Pro', 'search-replace-for-elementor' ); ?>
 					<i class="dashicons dashicons-external"></i>
 				</a>
