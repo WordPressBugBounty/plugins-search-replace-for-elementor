@@ -40,8 +40,6 @@ function elemsnr_check_requirements() {
 
 	if ( version_compare( PHP_VERSION, ELEMSNR_MIN_PHP_VERSION ) >= 0
 		&& version_compare( $GLOBALS['wp_version'], ELEMSNR_MIN_WP_VERSION ) >= 0 ) {
-		load_plugin_textdomain( ELEMSNR_PLUGIN_TEXTDOMAIN, false, ELEMSNR_PLUGIN_BASENAME . 'lang' );
-
 		add_action(
 			'plugin_action_links',
 			__NAMESPACE__ . '\elemsnr_add_action_links',

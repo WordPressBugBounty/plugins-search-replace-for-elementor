@@ -3,7 +3,7 @@
  * Plugin Name: Search & Replace for Elementor
  * Plugin URI: https://searchreplaceplugin.com/
  * Description: Quickly search and replace any text, links, or images in Elementor using Search & Replace for Elementor.
- * Version: 1.5.4
+ * Version: 1.5.5
  * Requires at least: 5.0
  * Requires PHP: 7.2
  * Requires plugins: elementor

@@ -16,15 +16,24 @@ namespace DEVRY\ELEMSNR;
  * Dismiss the rating notice, if the user chooses to do so.
  */
 function elemsnr_dismiss_admin_notice() {
-	$action   = ( isset( $_REQUEST['action'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['action'] ) ) : '';
-	$_wpnonce = ( isset( $_REQUEST['_wpnonce'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['_wpnonce'] ) ) : '';
-
-	if ( empty( $action ) || empty( $_wpnonce ) ) {
+	// Only run in admin
+	if ( ! is_admin() ) {
 		return;
 	}
 
+	// Bail early if no action
+	if ( empty( $_REQUEST['action'] ) ) {
+		return;
+	}
+
+	$action = sanitize_text_field( wp_unslash( $_REQUEST['action'] ) );
+
 	if ( 'elemsnr_dismiss_rating_notice' === $action ) {
-		if ( wp_verify_nonce( $_wpnonce, 'elemsnr_rating_notice_nonce' ) ) {
+		// Verify nonce (this checks $_REQUEST['_wpnonce'] automatically)
+		check_admin_referer( 'elemsnr_rating_notice_nonce' );
+
+		// Make sure only users with the right capability can dismiss
+		if ( current_user_can( 'manage_options' ) ) {
 			add_option( 'elemsnr_rating_notice', true );
 		}
 	}
@@ -36,15 +45,24 @@ add_action( 'admin_init', __NAMESPACE__ . '\elemsnr_dismiss_admin_notice' );
  * Dismiss the upgrade notice, if the user chooses to do so.
  */
 function elemsnr_dismiss_upgrade_notice() {
-	$action   = ( isset( $_REQUEST['action'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['action'] ) ) : '';
-	$_wpnonce = ( isset( $_REQUEST['_wpnonce'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['_wpnonce'] ) ) : '';
-
-	if ( empty( $action ) || empty( $_wpnonce ) ) {
+	// Only run in admin area
+	if ( ! is_admin() ) {
 		return;
 	}
 
+	// Bail if no action is present
+	if ( empty( $_REQUEST['action'] ) ) {
+		return;
+	}
+
+	$action = sanitize_text_field( wp_unslash( $_REQUEST['action'] ) );
+
 	if ( 'elemsnr_dismiss_upgrade_notice' === $action ) {
-		if ( wp_verify_nonce( $_wpnonce, 'elemsnr_upgrade_notice_nonce' ) ) {
+		// Verify nonce (will exit if invalid)
+		check_admin_referer( 'elemsnr_upgrade_notice_nonce' );
+
+		// Ensure only users with the right capability can dismiss
+		if ( current_user_can( 'manage_options' ) ) {
 			add_option( 'elemsnr_upgrade_notice', true );
 		}
 	}
