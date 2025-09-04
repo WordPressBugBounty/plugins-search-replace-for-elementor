@@ -13,5 +13,6 @@ namespace DEVRY\ELEMSNR;
 ! defined( ABSPATH ) || exit; // Exit if accessed directly.
 
 require_once ELEMSNR_PLUGIN_DIR_PATH . 'inc/admin/requirements/requirements.php';
-require_once ELEMSNR_PLUGIN_DIR_PATH . 'inc/admin/settings/settings.php';
+require_once ELEMSNR_PLUGIN_DIR_PATH . 'inc/admin/bulk-search/bulk-search.php';
 require_once ELEMSNR_PLUGIN_DIR_PATH . 'inc/admin/elementor/elementor.php';
+require_once ELEMSNR_PLUGIN_DIR_PATH . 'inc/admin/settings/settings.php';

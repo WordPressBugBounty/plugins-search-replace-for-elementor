@@ -1,0 +1,39 @@
+<?php
+/**
+ * [Short description]
+ *
+ * @package    DEVRY\ELEMSNR
+ * @copyright  Copyright (c) 2025, Developry Ltd.
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
+ * @since      1.5
+ */
+
+namespace DEVRY\ELEMSNR;
+
+! defined( ABSPATH ) || exit; // Exit if accessed directly.
+
+/**
+ * Display the setting.
+ */
+function elemsnr_display_disable_minimum_chars() {
+	?>
+	<select id="elemsnr-pro-disable-minimum-chars" name="elemsnr_disable_minimum_chars" disabled>
+			<option value="">No</option>
+			<option value="yes">Yes</option>
+		</select>
+		<p class="description">
+			<small>
+				<?php
+				printf(
+					wp_kses(
+						/* translators: %1$s is replaced with "Disable the minimum limit" */
+						__( 'Disable the minimum character requirement for search and replace input fields: %1$s.', 'search-replace-for-elementor' ),
+						json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR )
+					),
+					'<strong>' . esc_html__( 'Disable the minimum limit', 'search-replace-for-elementor' ) . '</strong>',
+				);
+				?>
+			</small>
+		</p>
+	<?php
+}

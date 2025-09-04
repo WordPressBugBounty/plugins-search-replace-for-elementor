@@ -311,6 +311,80 @@ if ( ! class_exists( 'Elementor_Search_Replace' ) ) {
 				update_option( 'elemsnr_replace_html_regex', get_option( 'elemsnr_replace_html_regex' ) - 1 );
 			}
 		}
+
+				/**
+		 * Get all posts passed by post type.
+		 */
+		public function get_all_posts( $post_type ) {
+			if ( empty( $post_type ) || ! post_type_exists( $post_type ) ) {
+				return false;
+			}
+
+			$query = new \WP_Query(
+				array(
+					'post_type'      => $post_type,
+					'post_status'    => 'publish',
+					'posts_per_page' => 9999,
+					'paged'          => -1,
+				)
+			);
+
+			// Return posts if there's at least 1 Elementor type post.
+			if ( $query->have_posts() ) {
+				return $query->posts;
+			}
+
+			return false;
+		}
+
+		/**
+		 * Get all posts passed by post type (PAGED).
+		 */
+		public function get_all_posts_paged( $post_type, $page_number, $posts_per_page ) {
+			if ( empty( $post_type ) || ! post_type_exists( $post_type ) ) {
+				return false;
+			}
+
+			$query = new \WP_Query(
+				array(
+					'post_type'      => $post_type,
+					'post_status'    => 'publish',
+					'posts_per_page' => $posts_per_page,
+					'paged'          => $page_number,
+					'meta_query'     => array(
+						array(
+							'key'     => '_elementor_edit_mode',
+							'value'   => 'builder', // Assuming 'builder' is the value indicating Elementor editing mode.
+							'compare' => '=',
+						),
+					),
+				)
+			);
+
+			// Return posts if there's at least 1 Elementor type post.
+			if ( $query->have_posts() ) {
+				return array(
+					'posts'       => $query->posts,
+					'total_pages' => $query->max_num_pages,
+				);
+			}
+
+			return false;
+		}
+
+		/**
+		 * Get an array with all available post types including posts and pages.
+		 */
+		public function get_post_types() {
+			$types = array_merge(
+				array(
+					'post' => 'post',
+					'page' => 'page',
+				)
+			);
+
+			return $types;
+		}
 	}
 
 	$elemsnr = new Elementor_Search_Replace();

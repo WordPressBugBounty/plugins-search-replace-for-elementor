@@ -12,9 +12,16 @@ namespace DEVRY\ELEMSNR;
 
 ! defined( ABSPATH ) || exit; // Exit if accessed directly.
 
+$elemsnr_admin = new ELEMSNR_Admin();
+
+$has_user_cap = $elemsnr_admin->check_user_cap();
+
 ?>
 <div class="elemsnr-admin">
 	<div class="elemsnr-container">
+		<div class="elemsnr-loading-bar"></div>
+		<div id="elemsnr-output" class="notice is-dismissible elemsnr-output"></div>
+		<?php settings_errors( 'elemsnr_settings_errors' ); ?>
 		<div class="elemsnr-pro">
 			<h4>
 				<?php echo esc_html__( 'Get the PRO version today!', 'search-replace-for-elementor' ); ?>
@@ -45,7 +52,7 @@ namespace DEVRY\ELEMSNR;
 				</tr>
 				<tr>
 					<td><?php echo esc_html__( 'Bulk/Mass search and replace', 'search-replace-for-elementor' ); ?></td>
-					<td><?php echo esc_html__( 'no', 'search-replace-for-elementor' ); ?></td>
+					<td><?php echo esc_html__( 'limited', 'search-replace-for-elementor' ); ?></td>
 					<td><?php echo esc_html__( 'yes', 'search-replace-for-elementor' ); ?></td>
 				</tr>
 				<tr>
@@ -105,43 +112,27 @@ namespace DEVRY\ELEMSNR;
 					<?php echo esc_html__( 'Watch Video', 'search-replace-for-elementor' ); ?>
 				</a>
 			</p>
-		</div>
-		<div>
-			<h2>
-				<?php esc_html_e( 'Search & Replace for Elementor', 'search-replace-for-elementor' ); ?>
-			</h2>
-			<p>
-				<?php esc_html_e( 'Quickly search and replace any text, links, or images in Elementor using Search & Replace for Elementor.', 'search-replace-for-elementor' ); ?>
-			</p>
+			<p>&nbsp;</p>
 			<p>
 				<?php
 				printf(
 					/* translators: %1$s is replaced with "Need to perform bulk or mass search and replace?" */
 					/* translators: %2$s is replaced with "Get the PRO version now" */
 					wp_kses( '%1$s %2$s!', 'search-replace-for-elementor', json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true ) ),
-					'<em>' . esc_html__( 'Need to perform bulk or mass search and replace?', 'search-replace-for-elementor' ) . '</em>',
+					'<em>' . esc_html__( 'Need to perform full bulk or mass search and replace?', 'search-replace-for-elementor' ) . '</em>',
 					'<a href="https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=pro_table_button" target="_blank"><strong>' . esc_html__( 'Get the PRO version now', 'search-replace-for-elementor' ) . '</strong></a>'
 				);
 				?>
 			</p>
 			<p>
 				<iframe 
-					height="540" 
-					src="https://www.youtube.com/embed/FoWqNtUVklY" 
+					height="320" 
+					src="https://www.youtube.com/embed/I6duntBqhDA" 
 					title="Search & Replace for Elementor" 
 					frameborder="0" 
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
 					allowfullscreen>
 				</iframe>
-			</p>
-			<p>
-				<?php
-				printf(
-					/* translators: %1$s is replaced with "Note" */
-					wp_kses( '%1$s: Bulk search and replace for links (URLs), images, case-sensitive filters, backups, and custom options are available only in the PRO version!', 'search-replace-for-elementor', json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true ) ),
-					'<strong>' . esc_html__( 'Note', 'search-replace-for-elementor' ) . '</strong>'
-				);
-				?>
 			</p>
 			<div class="feature-screenshots">
 				<div>
@@ -152,9 +143,34 @@ namespace DEVRY\ELEMSNR;
 				</div>
 			</div>
 			<hr />
+			<p>
+				<?php
+				printf(
+					/* translators: %1$s is replaced with "Note" */
+					wp_kses( '%1$s: Full bulk search and replace for links (URLs), images, case-sensitive filters, backups, and custom options are available only in the PRO version!', 'search-replace-for-elementor', json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR, true ) ),
+					'<strong>' . esc_html__( 'Note', 'search-replace-for-elementor' ) . '</strong>'
+				);
+				?>
+			</p>
+		</div>
+		<div>
+			<p>
+			<?php
+				printf(
+					wp_kses(
+						/* translators: %1$s is replaced with "Important" */
+						/* translators: %2$s is replaced with "Link to the website" */
+						/* translators: %3$s is replaced with "Get PRO Version" */
+						__( '%1$s: <a href="%2$s" target="_blank">%3$s</a> to able to have a full control over the plugin settings and extend the default mode.', 'search-replace-for-elementor' ),
+						json_decode( ELEMSNR_PLUGIN_ALLOWED_HTML_ARR )
+					),
+					'<strong>' . esc_html__( 'Important', 'search-replace-for-elementor' ) . '</strong>',
+					esc_url( 'https://searchreplaceplugin.com/?utm_source=elemsnr&utm_medium=free_plugin&utm_campaign=pro_badge' ),
+					'<strong>' . esc_html__( 'Get the PRO Version today', 'search-replace-for-elementor' ) . '</strong>'
+				);
+				?>
+			</p>
 			<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
-				<div id="elemsnr-output" class="notice is-dismissible elemsnr-output"></div>
-				<?php settings_errors( 'elemsnr_settings_errors' ); ?>
 				<?php wp_nonce_field( 'elemsnr_settings_nonce', 'elemsnr_wpnonce' ); ?>
 				<?php
 					settings_fields( ELEMSNR_SETTINGS_SLUG );
@@ -166,9 +182,23 @@ namespace DEVRY\ELEMSNR;
 						class="button button-primary"
 						id="elemsnr-save-settings"
 						name="elemsnr-save-settings"
+						<?php if ( ! $has_user_cap ) : ?>
+							disabled
+						<?php endif; ?>
 					>
 						<?php echo esc_html__( 'Save', 'search-replace-for-elementor' ); ?>
 					</button>
+					<button
+					type="button"
+					class="button"
+					id="elemsnr-reset-settings"
+					name="elemsnr-reset-settings"
+					<?php if ( ! $has_user_cap ) : ?>
+						disabled
+					<?php endif; ?>
+				>
+					<?php echo esc_html__( 'Reset', 'search-replace-for-elementor' ); ?>
+				</button>
 				</p>
 			</form>
 			<br clear="all" />

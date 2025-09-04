@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 1.1\n"
 "Report-Msgid-Bugs-To: Search & Replace for Elementor <contact@developry.com>\n"
 "POT-Creation-Date: 2023-03-07 17:19+0200\n"
-"PO-Revision-Date: 2024-12-13 17:19+0200\n"
+"PO-Revision-Date: 2025-09-04 17:19+0200\n"
 "Last-Translator: Krasen Slavov <contact@developry.com>\n"
 "Language-Team: ELEMSNR <contact@developry.com>\n"
 "Language: \n"
@@ -18,13 +18,420 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Eazy Po 1.0.0.0\n"
 
-#: search-replace-for-elementor.php:44
+#: inc/admin/nav.php:26
+#, php-format
+msgid ""
+"<a href=\"%1$s\" target=\"_blank\">%2$s</a>! Use the full-featured bulk/mass "
+"search and replace with extened options."
+msgstr ""
+
+#: inc/admin/nav.php:30 inc/admin/bulk-search/bulk-search-main-page.php:488
+#: inc/admin/settings/settings-main-page.php:169
+msgid "Get the PRO Version today"
+msgstr ""
+
+#: inc/admin/nav.php:36 inc/admin/bulk-search/bulk-search-menu.php:20
+#: inc/admin/bulk-search/bulk-search-menu.php:31
 #: inc/admin/requirements/check-elementor.php:27
 #: inc/admin/requirements/check-elementor.php:51
-#: inc/admin/settings/settings-main-page.php:115
-#: inc/admin/settings/settings-menu.php:23
-#: inc/admin/settings/settings-menu.php:34
+#: inc/admin/requirements/wp-pointers.php:55
 msgid "Search & Replace for Elementor"
+msgstr ""
+
+#: inc/admin/nav.php:42
+msgid ""
+"Quickly search and replace any text, links, or images in Elementor using "
+"Search & Replace for Elementor."
+msgstr ""
+
+#: inc/admin/nav.php:53
+msgid "Bulk Search"
+msgstr ""
+
+#: inc/admin/nav.php:56
+msgid "Backup"
+msgstr ""
+
+#: inc/admin/nav.php:58 inc/admin/nav.php:64 inc/admin/nav.php:76
+#: inc/admin/bulk-search/bulk-search-main-page.php:185
+#: inc/admin/bulk-search/bulk-search-main-page.php:217
+#: inc/admin/bulk-search/bulk-search-main-page.php:294
+#: inc/admin/bulk-search/bulk-search-main-page.php:310
+#: inc/admin/bulk-search/bulk-search-main-page.php:326
+#: inc/admin/bulk-search/bulk-search-main-page.php:337
+msgid "Pro"
+msgstr ""
+
+#: inc/admin/nav.php:62
+msgid "License"
+msgstr ""
+
+#: inc/admin/nav.php:71 inc/admin/bulk-search/bulk-search-main-page.php:259
+#: inc/admin/settings/settings-menu.php:21
+#: inc/admin/settings/settings-menu.php:30
+msgid "Options"
+msgstr ""
+
+#: inc/admin/nav.php:74
+msgid "Help"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-actions.php:40
+msgid "No published Elementor posts were found."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-actions.php:130
+msgid "Enter at least 3 characters for the \"search\" value."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-actions.php:137
+msgid "Enter at least 3 characters for the \"replace with\" value."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-actions.php:144
+#: inc/admin/bulk-search/bulk-search-actions.php:277
+msgid ""
+"You must select at least one page or post to execute the search and replace."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-actions.php:211
+#: inc/admin/elementor/elementor-actions.php:80
+#, php-format
+msgid "No results found for %1$s!"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-actions.php:294
+msgid "All custom HTML tags have been removed successfully!"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:28
+#: inc/admin/settings/settings-main-page.php:27
+msgid "Get the PRO version today!"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:31
+#: inc/admin/settings/settings-main-page.php:30
+msgid ""
+"The PRO version will unlock more features, better performance, and a faster "
+"search & replace process in bulk."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:35
+#: inc/admin/settings/settings-main-page.php:34
+msgid "Feature"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:36
+#: inc/admin/settings/settings-main-page.php:35
+msgid "Free"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:37
+#: inc/admin/settings/settings-main-page.php:36
+msgid "PRO"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:40
+#: inc/admin/settings/settings-main-page.php:39
+msgid "Elementor editor toolbar support"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:41
+#: inc/admin/bulk-search/bulk-search-main-page.php:42
+#: inc/admin/bulk-search/bulk-search-main-page.php:51
+#: inc/admin/bulk-search/bulk-search-main-page.php:52
+#: inc/admin/bulk-search/bulk-search-main-page.php:57
+#: inc/admin/bulk-search/bulk-search-main-page.php:62
+#: inc/admin/bulk-search/bulk-search-main-page.php:67
+#: inc/admin/bulk-search/bulk-search-main-page.php:72
+#: inc/admin/bulk-search/bulk-search-main-page.php:77
+#: inc/admin/bulk-search/bulk-search-main-page.php:82
+#: inc/admin/bulk-search/bulk-search-main-page.php:92
+#: inc/admin/settings/settings-main-page.php:40
+#: inc/admin/settings/settings-main-page.php:41
+#: inc/admin/settings/settings-main-page.php:50
+#: inc/admin/settings/settings-main-page.php:51
+#: inc/admin/settings/settings-main-page.php:56
+#: inc/admin/settings/settings-main-page.php:61
+#: inc/admin/settings/settings-main-page.php:66
+#: inc/admin/settings/settings-main-page.php:71
+#: inc/admin/settings/settings-main-page.php:76
+#: inc/admin/settings/settings-main-page.php:81
+#: inc/admin/settings/settings-main-page.php:91
+msgid "yes"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:45
+#: inc/admin/settings/settings-main-page.php:44
+msgid "Raw data size limit"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:46
+#: inc/admin/settings/settings-main-page.php:45
+msgid "300kb"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:47
+#: inc/admin/settings/settings-main-page.php:46
+msgid "10,240kb"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:50
+#: inc/admin/settings/settings-main-page.php:49
+msgid "Page-by-page search and replace"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:55
+#: inc/admin/settings/settings-main-page.php:54
+msgid "Bulk/Mass search and replace"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:56
+#: inc/admin/settings/settings-main-page.php:55
+msgid "limited"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:60
+#: inc/admin/settings/settings-main-page.php:59
+msgid "Third-party add-ons support"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:61
+#: inc/admin/bulk-search/bulk-search-main-page.php:66
+#: inc/admin/bulk-search/bulk-search-main-page.php:71
+#: inc/admin/bulk-search/bulk-search-main-page.php:76
+#: inc/admin/bulk-search/bulk-search-main-page.php:81
+#: inc/admin/bulk-search/bulk-search-main-page.php:91
+#: inc/admin/settings/settings-main-page.php:60
+#: inc/admin/settings/settings-main-page.php:65
+#: inc/admin/settings/settings-main-page.php:70
+#: inc/admin/settings/settings-main-page.php:75
+#: inc/admin/settings/settings-main-page.php:80
+#: inc/admin/settings/settings-main-page.php:90
+msgid "no"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:65
+#: inc/admin/settings/settings-main-page.php:64
+msgid "Backup your uploads folder"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:70
+#: inc/admin/settings/settings-main-page.php:69
+msgid "Search by field keys or widgets"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:75
+#: inc/admin/settings/settings-main-page.php:74
+msgid "Unfiltered/Partial URLs"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:80
+#: inc/admin/settings/settings-main-page.php:79
+msgid "Database backup and import"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:85
+#: inc/admin/settings/settings-main-page.php:84
+msgid "HTML RegEx requests"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:86
+#: inc/admin/settings/settings-main-page.php:85
+msgid "10 per hour\t"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:87
+#: inc/admin/settings/settings-main-page.php:86
+msgid "unlimited"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:90
+#: inc/admin/settings/settings-main-page.php:89
+msgid "Priority email support"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:95
+#: inc/admin/settings/settings-main-page.php:94
+msgid "Regular plugin updates"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:96
+#: inc/admin/settings/settings-main-page.php:95
+msgid "delayed"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:97
+#: inc/admin/settings/settings-main-page.php:96
+msgid "priority"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:106
+#: inc/admin/settings/settings-main-page.php:105
+msgid "GET PRO VERSION"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:113
+#: inc/admin/settings/settings-main-page.php:112
+msgid "Watch Video"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:123
+#: inc/admin/settings/settings-main-page.php:122
+msgid "Need to perform full bulk or mass search and replace?"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:124
+#: inc/admin/settings/settings-main-page.php:123
+msgid "Get the PRO version now"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:152
+#: inc/admin/settings/settings-main-page.php:151
+msgid "Note"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:165
+#, php-format
+msgid ""
+"%1$s: It is strongly recommended to %2$s before performing bulk search & "
+"replace, especially without the the %3$s option enabled."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:168
+#: inc/admin/settings/settings-main-page.php:167
+msgid "Important"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:169
+msgid "backup your database"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:170
+#: inc/admin/bulk-search/bulk-search-main-page.php:258
+msgid "dry-run"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:181
+msgid "HTML RegEx<br />(Experts Only)"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:200
+msgid "HTML with RegEx"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:205
+msgid ""
+"Search and replace HTML in Text Editor widgets using regular expressions."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:213
+#: inc/admin/settings/settings-page.php:34
+msgid "Dry-run"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:233
+msgid "No"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:246
+msgid "Yes"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:255
+#, php-format
+msgid "The %1$s default setting can be changed from the %2$s page."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:268
+msgid "Search method"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:279
+msgid "Text-only"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:290
+msgid "Case-sensitive search and replace"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:306
+msgid "Links (URLs)"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:322
+msgid "Images"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:334
+msgid "Select post type"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:360
+msgid "Search and filter post titles..."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:368
+msgid "Toggle All Posts"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:382
+msgid "custom post types"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:392
+msgid "Search for"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:410
+msgid ""
+"A search phrase is required with a minimum of 3 characters; HTML is not "
+"allowed."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:419
+msgid "Replace with"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:437
+msgid ""
+"A replace with phrase is required with a minimum of 3 characters; HTML is "
+"not allowed."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:454
+#: inc/admin/bulk-search/bulk-search-menu.php:32
+msgid "Search & Replace"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:461
+msgid "Start Over"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:472
+#: inc/admin/bulk-search/bulk-search-main-page.php:500
+msgid "Clear"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:484
+#, php-format
+msgid ""
+"• <a href=\"%1$s\" target=\"_blank\">%2$s</a> to use the full-featured bulk/"
+"mass search and replace functionality."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:497
+#, php-format
+msgid ""
+"• The %1$s button removes all custom tags (%2$s) from the selected posts."
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-main-page.php:501
+msgid "used for highlighting"
+msgstr ""
+
+#: inc/admin/bulk-search/bulk-search-menu.php:21
+msgid "Elementor S/R"
 msgstr ""
 
 #: inc/admin/elementor/elementor-actions.php:44
@@ -35,11 +442,6 @@ msgstr ""
 #: inc/admin/elementor/elementor-actions.php:51
 #: inc/admin/elementor/elementor-actions.php:202
 msgid "The URL you entered is invalid (e.g., https://example.com/)."
-msgstr ""
-
-#: inc/admin/elementor/elementor-actions.php:80
-#, php-format
-msgid "No results found for %1$s!"
 msgstr ""
 
 #: inc/admin/elementor/elementor-actions.php:95
@@ -69,12 +471,12 @@ msgstr ""
 msgid "Regex %1$s was used and replaced with %2$s."
 msgstr ""
 
-#: inc/admin/requirements/action-links.php:23
+#: inc/admin/requirements/action-links.php:24
 msgid "Settings"
 msgstr ""
 
-#: inc/admin/requirements/action-links.php:26
-#: inc/admin/requirements/pro-plugin.php:69
+#: inc/admin/requirements/action-links.php:28
+#: inc/admin/requirements/pro-plugin.php:71
 msgid "Go Pro"
 msgstr ""
 
@@ -85,6 +487,7 @@ msgstr ""
 
 #: inc/admin/requirements/check-elementor.php:28
 #: inc/admin/requirements/check-elementor.php:52
+#: inc/admin/requirements/wp-pointers.php:61
 msgid "Elementor"
 msgstr ""
 
@@ -93,54 +496,65 @@ msgstr ""
 msgid "%1$s requires %2$s version %3$s or greater."
 msgstr ""
 
-#: inc/admin/requirements/check-requirements.php:76
+#: inc/admin/requirements/check-requirements.php:64
 #, php-format
 msgid "%1$s requires a minimum of PHP %2$s and WordPress %3$s"
 msgstr ""
 
-#: inc/admin/requirements/check-requirements.php:85
+#: inc/admin/requirements/check-requirements.php:73
 #, php-format
 msgid "You are currently running PHP %1$s and WordPress %2$s."
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:31
+#: inc/admin/requirements/notice-rating.php:33
 #, php-format
 msgid "✨💪🔌 Could you kindly support the plugin by %1$s? Thank you in advance!"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:34
+#: inc/admin/requirements/notice-rating.php:36
 msgid "by giving it 5 stars rating"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:40
+#: inc/admin/requirements/notice-rating.php:42
 msgid "Rate us @ WordPress.org"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:44
-#: inc/admin/requirements/pro-plugin.php:73
+#: inc/admin/requirements/notice-rating.php:46
+#: inc/admin/requirements/pro-plugin.php:75
 msgid "I already did"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:47
-#: inc/admin/requirements/pro-plugin.php:76
+#: inc/admin/requirements/notice-rating.php:49
+#: inc/admin/requirements/pro-plugin.php:78
 msgid "Don't show this notice again!"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:39
+#: inc/admin/requirements/pro-plugin.php:53
 msgid "Elementor Search and Replace PRO 🚀"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:46
+#: inc/admin/requirements/pro-plugin.php:61
 #, php-format
 msgid "✨🎉📢 %1$s? Discover the benefits of upgrading to %2$s!"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:49
+#: inc/admin/requirements/pro-plugin.php:64
 msgid "Found the free version helpful"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:50
+#: inc/admin/requirements/pro-plugin.php:65
 msgid "Elementor Search and Replace Pro"
+msgstr ""
+
+#: inc/admin/requirements/wp-pointers.php:59
+#, php-format
+msgid ""
+"%1$s Now you can use the text-only bulk/mass search and replace for %2$s "
+"posts and pages."
+msgstr ""
+
+#: inc/admin/requirements/wp-pointers.php:60
+msgid "New!"
 msgstr ""
 
 #: inc/admin/settings/compact-mode.php:38
@@ -151,186 +565,114 @@ msgstr ""
 msgid "Compact mode option was updated successfully."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:20
-msgid "Get the PRO version today!"
+#: inc/admin/settings/data-field-keys-required.php:30
+#, php-format
+msgid "Disable required field keys. %1$s."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:24
+#: inc/admin/settings/data-field-keys-required.php:33
+msgid "Disable the use of Text & Editor field keys by default"
+msgstr ""
+
+#: inc/admin/settings/data-field-keys.php:22
+#, php-format
+msgid "%1$s!"
+msgstr ""
+
+#: inc/admin/settings/data-field-keys.php:25
+msgid "Default available data field keys in use."
+msgstr ""
+
+#: inc/admin/settings/data-field-keys.php:36
+#: inc/admin/settings/widget-types.php:36
+msgid "Scan"
+msgstr ""
+
+#: inc/admin/settings/data-field-keys.php:45
+#: inc/admin/settings/settings-main-page.php:200
+#: inc/admin/settings/widget-types.php:45
+msgid "Reset"
+msgstr ""
+
+#: inc/admin/settings/data-field-keys.php:50
+msgid "Scan and update Elementor data field keys."
+msgstr ""
+
+#: inc/admin/settings/data-size-limit.php:36
+msgid "Overwrite the default Elementor raw size limit of 300kb."
+msgstr ""
+
+#: inc/admin/settings/disable-minimum-chars.php:30
+#, php-format
 msgid ""
-"The PRO version will unlock more features, better performance, and a faster "
-"search & replace process in bulk."
+"Disable the minimum character requirement for search and replace input "
+"fields: %1$s."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:29
-msgid "Feature"
+#: inc/admin/settings/disable-minimum-chars.php:33
+msgid "Disable the minimum limit"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:30
-msgid "Free"
+#: inc/admin/settings/dry-run.php:26
+msgid "Modify the default setting for the bulk search dry-run option."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:31
-msgid "PRO"
+#: inc/admin/settings/highlight-links-images.php:30
+#, php-format
+msgid "Add a class to the parent element and highlight links and images: %1$s."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:34
-msgid "Elementor editor toolbar support"
+#: inc/admin/settings/highlight-links-images.php:33
+msgid "Available only for Elementor Pro"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:35
-#: inc/admin/settings/settings-main-page.php:36
-#: inc/admin/settings/settings-main-page.php:45
-#: inc/admin/settings/settings-main-page.php:46
-#: inc/admin/settings/settings-main-page.php:51
-#: inc/admin/settings/settings-main-page.php:56
-#: inc/admin/settings/settings-main-page.php:61
-#: inc/admin/settings/settings-main-page.php:66
-#: inc/admin/settings/settings-main-page.php:71
-#: inc/admin/settings/settings-main-page.php:76
-#: inc/admin/settings/settings-main-page.php:86
-msgid "yes"
+#: inc/admin/settings/settings-actions.php:28
+msgid "All options have been reset to their default values."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:39
-msgid "Raw data size limit"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:40
-msgid "300kb"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:41
-msgid "10,240kb"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:44
-msgid "Page-by-page search and replace"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:49
-msgid "Bulk/Mass search and replace"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:50
-#: inc/admin/settings/settings-main-page.php:55
-#: inc/admin/settings/settings-main-page.php:60
-#: inc/admin/settings/settings-main-page.php:65
-#: inc/admin/settings/settings-main-page.php:70
-#: inc/admin/settings/settings-main-page.php:75
-#: inc/admin/settings/settings-main-page.php:85
-msgid "no"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:54
-msgid "Third-party add-ons support"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:59
-msgid "Backup your uploads folder"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:64
-msgid "Search by field keys or widgets"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:69
-msgid "Unfiltered/Partial URLs"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:74
-msgid "Database backup and import"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:79
-msgid "HTML RegEx requests"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:80
-msgid "10 per hour\t"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:81
-msgid "unlimited"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:84
-msgid "Priority email support"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:89
-msgid "Regular plugin updates"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:90
-msgid "delayed"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:91
-msgid "priority"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:101
-msgid "GET PRO VERSION"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:108
-msgid "Watch Video"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:119
+#: inc/admin/settings/settings-main-page.php:164
+#, php-format
 msgid ""
-"Quickly search and replace any text, links, or images in Elementor using "
-"Search & Replace for Elementor."
+"%1$s: <a href=\"%2$s\" target=\"_blank\">%3$s</a> to able to have a full "
+"control over the plugin settings and extend the default mode."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:128
-msgid "Need to perform bulk or mass search and replace?"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:129
-msgid "Get the PRO version now"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:150
-msgid "Note"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:180
+#: inc/admin/settings/settings-main-page.php:189
 msgid "Save"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:195
+#: inc/admin/settings/settings-main-page.php:212
 #, php-format
 msgid ""
 "If something isn't clear, please open a ticket on the official plugin %1$s. "
 "We aim to address all tickets within a few working days."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:198
+#: inc/admin/settings/settings-main-page.php:215
 msgid "Support Forum"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:203
+#: inc/admin/settings/settings-main-page.php:220
 msgid "Please rate us"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:209
+#: inc/admin/settings/settings-main-page.php:226
 msgid "Having issues?"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:211
+#: inc/admin/settings/settings-main-page.php:228
 msgid "Create a Support Ticket"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:215
+#: inc/admin/settings/settings-main-page.php:232
 msgid "Developed by"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:217
+#: inc/admin/settings/settings-main-page.php:234
 msgid "Krasen Slavov @ Developry"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:230
+#: inc/admin/settings/settings-main-page.php:245
 #, php-format
 msgid ""
 "* For the price of a cup of coffee per month, you can %1$s to support the "
@@ -338,20 +680,91 @@ msgid ""
 "and is greatly appreciated!"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:233
+#: inc/admin/settings/settings-main-page.php:248
 msgid "help and support me on Patreon"
 msgstr ""
 
-#: inc/admin/settings/settings-menu.php:24
-msgid "Elementor S/R"
+#: inc/admin/settings/settings-page.php:44
+msgid "Unfiltered Text"
 msgstr ""
 
-#: inc/admin/settings/settings-menu.php:35
-msgid "Search & Replace"
+#: inc/admin/settings/settings-page.php:54
+msgid "Unfiltered URLs"
 msgstr ""
 
-#: inc/admin/settings/settings-page.php:33
+#: inc/admin/settings/settings-page.php:64
+msgid "Disable Minimum Chars"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:74
+msgid "Highlight Links & Images"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:84
+msgid "Data Size Limit"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:94
+msgid "Show Posts per Page"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:104
+msgid "Third-party Addons"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:114
+msgid "Required Data Field Keys"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:124
+msgid "Data Field Keys<br />(Experts Only)"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:134
+msgid "Widget Types<br />(Experts Only)"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:144
 msgid "Compact Mode"
+msgstr ""
+
+#: inc/admin/settings/show-posts-per-page.php:35
+msgid "Display the number of posts per page for the selected post types."
+msgstr ""
+
+#: inc/admin/settings/third-party-addons.php:28
+msgid "Quick integration with third-party addons."
+msgstr ""
+
+#: inc/admin/settings/unfiltered-text.php:30
+#, php-format
+msgid "Search and replace text phrases without validation: %1$s."
+msgstr ""
+
+#: inc/admin/settings/unfiltered-text.php:33
+msgid "Disable text sanitization and validation"
+msgstr ""
+
+#: inc/admin/settings/unfiltered-urls.php:30
+#, php-format
+msgid "Search and replace partial URLs without validation: %1$s."
+msgstr ""
+
+#: inc/admin/settings/unfiltered-urls.php:33
+msgid "Disable URL sanitization and validation"
+msgstr ""
+
+#: inc/admin/settings/widget-types.php:22
+#, php-format
+msgid "%1$s."
+msgstr ""
+
+#: inc/admin/settings/widget-types.php:25
+msgid "Default (ALL) available widget types are used"
+msgstr ""
+
+#: inc/admin/settings/widget-types.php:50
+msgid "Scan and update the Elementor widget types."
 msgstr ""
 
 #: inc/library/class-elemsnr-admin.php:91

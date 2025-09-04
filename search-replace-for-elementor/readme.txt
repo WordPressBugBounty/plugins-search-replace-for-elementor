@@ -6,7 +6,7 @@ Tags: elementor, replace, elementor pro, search, addon
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -126,6 +126,14 @@ _Make sure Elementor Free or Pro is activated beforehand._
 1. You can now go to any page or post using Elementor and use the plugin as outlined in the documentation.
 
 ## CHANGELOG
+
+= 1.5.6 =
+
+- New - Add text-only version for the bulk/mass search & replace functionlity
+- New - Extend the plugin page show up all the options
+- New - Add WP pointer to inform first time users about plugin bulk/mass search & replace
+- Update - Language file (.pot)
+- Update - Language file (.pot) header text
 
 = 1.5.5 =
 

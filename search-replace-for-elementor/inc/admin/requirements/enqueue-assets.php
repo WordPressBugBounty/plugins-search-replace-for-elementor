@@ -20,11 +20,6 @@ function elemsnr_enqueue_admin_assets() {
 		return;
 	}
 
-	// $elemsnr = new Elementor_Search_Replace();
-	// Load assets only for page page staring with prefix elemsnr-.
-	// $current_screen = get_current_screen();
-	// if ( strpos( $current_screen->id, 'elemsnr_' ) ) {}
-
 	wp_enqueue_style(
 		'elemsnr-admin',
 		ELEMSNR_PLUGIN_DIR_URL . 'assets/dist/css/elemsnr-admin.min.css',
@@ -33,24 +28,43 @@ function elemsnr_enqueue_admin_assets() {
 		'all'
 	);
 
-	wp_enqueue_script(
-		'elemsnr-admin',
-		ELEMSNR_PLUGIN_DIR_URL . 'assets/dist/js/elemsnr-admin.min.js',
-		array( 'jquery' ),
-		ELEMSNR_PLUGIN_VERSION,
-		true
-	);
+	// Load assets only for page page staring with prefix elemsnr_.
+	$screen = get_current_screen();
 
-	wp_localize_script(
-		'elemsnr-admin',
-		'elemsnr',
-		array(
-			'plugin_url'    => ELEMSNR_PLUGIN_DIR_URL,
-			'plugin_domain' => ELEMSNR_PLUGIN_DOMAIN,
-			'ajax_url'      => esc_url( admin_url( 'admin-ajax.php' ) ),
-			'ajax_nonce'    => wp_create_nonce( 'elemsnr_ajax_nonce' ),
-		)
-	);
+	if ( strpos( $screen->id, 'elemsnr_bulk_search' ) ) {
+		wp_enqueue_media();
+		wp_enqueue_script( 'media-grid' );
+		wp_enqueue_script( 'media' );
+
+		wp_enqueue_style(
+			'elemsnr-bulk-search',
+			ELEMSNR_PLUGIN_DIR_URL . 'assets/dist/css/elemsnr-bulk-search.min.css',
+			array(),
+			ELEMSNR_PLUGIN_VERSION,
+			'all'
+		);
+	}
+
+	if ( strpos( $screen->id, 'elemsnr_' ) ) {
+		wp_enqueue_script(
+			'elemsnr-admin',
+			ELEMSNR_PLUGIN_DIR_URL . 'assets/dist/js/elemsnr-admin.min.js',
+			array( 'jquery' ),
+			ELEMSNR_PLUGIN_VERSION,
+			true
+		);
+
+		wp_localize_script(
+			'elemsnr-admin',
+			'elemsnr',
+			array(
+				'plugin_url'    => ELEMSNR_PLUGIN_DIR_URL,
+				'plugin_domain' => ELEMSNR_PLUGIN_DOMAIN,
+				'ajax_url'      => esc_url( admin_url( 'admin-ajax.php' ) ),
+				'ajax_nonce'    => wp_create_nonce( 'elemsnr_ajax_nonce' ),
+			)
+		);
+	}
 }
 
 /**

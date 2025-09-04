@@ -17,8 +17,8 @@ namespace DEVRY\ELEMSNR;
  */
 function elemsnr_check_pro_plugin() {
 	// Deactitve the Pro version if active.
-	if ( is_plugin_active( 'search-replace-for-elementor-pro/search-replace-for-elementor.php' ) ) {
-		deactivate_plugins( 'search-replace-for-elementor-pro/search-replace-for-elementor.php', true );
+	if ( is_plugin_active( 'search-replace-for-elementor/search-replace-for-elementor.php' ) ) {
+		deactivate_plugins( 'search-replace-for-elementor/search-replace-for-elementor.php', true );
 	}
 }
 
